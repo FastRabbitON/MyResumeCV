@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>About ME</title>
+</head>
+<body>
+
+    <div id="skills"></div>
+    <div id="about"></div>
+    <div id="projects"></div>
+    <div id="contact"></div>
+    
+    <div id="background" class="background-about"></div>
+    <div id="square" class="square"></div>
+
+    <nav id="nav-section" class="nav-section">
+        <div class="nav-container">
+            <button id="nav-button-about" class="nav-button">About Me</button>
+            <button id="nav-button-skills" class="nav-button">Skills</button>
+            <button id="nav-button-projects" class="nav-button">Projects</button>
+            <button id="nav-button-contact" class="nav-button">Contact</button>
+            <button id="nav-button-github" class="nav-button">GitHub</button>
+        </div>   
+    </nav>
+
+    <nav class="nav-section-mobile" id="nav-section-mobile">
+
+        <div class="nav-container-mobile">
+            <button id="nav-button-about-mobile" class="nav-button">About Me</button>
+            <button id="nav-button-skills-mobile" class="nav-button">Skills</button>
+            <button id="nav-button-projects-mobile" class="nav-button">Projects</button>
+            <button id="nav-button-contact-mobile" class="nav-button">Contact</button>
+            <button id="nav-button-github-mobile" class="nav-button">GitHub</button>
+        </div>   
+    </nav>
+
+    <div id="burgermenu-container" class="burgermenu-container">
+        <div id="burgermenu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+    </div>
+
+    <main>
+
+        <div class="about-container">
+
+            <div class="about-left-section">
+
+                <div class="welcome-section">
+                    <div class="line-one">Hi!</div>
+                    <div class="line-two">my name is</div>
+                    <div class="line-three">Kacper</div>
+                </div>
+
+                <div class="about-big-sqr">
+                    <div class="about-small-sqr">
+                        <div class="about-content-sqr">
+                            <div class=""><b>AGE</b>: 24</div>
+                            <div class=""><b>NATIONALITY</b>: Poland</div>
+                            <div class=""><b>LANGUAGES</b>: Polish, English, PJM</div>
+                            <div class=""><b>EDUCATION</b>: Bachelor of Acoustics: Noise Protection and Hearing Care; </br> Master of Acoustics (in progress) </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="about-right-section">
+
+                <div class="avatar-big-sqr">
+                    <div class="avatar-small-sqr">
+                        <div class="avatar-content-sqr">
+                            
+                        </div>
+                    </div>
+                    <div class="avatar-smalltr-sqr"></div>
+                </div>
+
+                <div class="radiobuttons">
+                    <div id="color-one-mark" class="color-one-mark" onclick="ColorOne()"></div>
+
+                    <div id="color-two-mark" class="color-two-mark" onclick="ColorTwo()"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-container-mobile">
+
+            <div class="welcome-section">
+                <div class="line-one">Hi!</div>
+                <div class="line-two">my name is</div>
+                <div class="line-three">Kacper</div>
+            </div>
+
+
+            <div class="avatar-big-sqr">
+                <div class="avatar-small-sqr">
+                    <div class="avatar-content-sqr">
+
+                    </div>
+                </div>
+                <div class="avatar-smalltr-sqr"></div>
+            </div>
+
+            <div class="radiobuttons">
+                <div id="color-one-mark-mob" class="color-one-mark" onclick="ColorOne()"></div>
+
+                <div id="color-two-mark-mob" class="color-two-mark" onclick="ColorTwo()"></div>
+            </div>
+
+
+            <div class="about-big-sqr">
+                <div class="about-small-sqr">
+                    <div class="about-content-sqr">
+                        <div class=""><b>AGE</b>: 24</div>
+                        <div class=""><b>NATIONALITY</b>: Poland</div>
+                        <div class=""><b>LANGUAGES</b>: Polish, English, PJM</div>
+                        <div class=""><b>EDUCATION</b>: Bachelor of Acoustics: Noise Protection and Hearing Care; </br> Master of Acoustics (in progress) </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="skill-container">
+
+            <div id="skill-background" class="skill-background"></div>
+
+            <div class="skill-left-section">
+                <div class="skill-big-sqr">
+                    <div class="skill-small-sqr">
+                        <div class="skill-content-sqr">
+                            <h1>Programming / Skills</h1>
+
+                            <div class="html-cell">
+                                <div class="html-cell-title">HTML</div> 
+                                <div class="html-cell-content">
+                                    <div class="full-dot"></div>
+                                    <div class="full-dot"></div>
+                                    <div class="full-dot"></div>
+                                    <div class="full-dot"></div>
+                                    <div class="half-dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="css-cell">
+                                <div class="css-cell-title">CSS</div> 
+                                <div class="css-cell-content">
+                                    <div class="full-dot"></div>
+                                    <div class="full-dot"></div>
+                                    <div class="full-dot"></div>
+                                    <div class="full-dot"></div>
+                                    <div class="empty-dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="js-cell">
+                                <div class="js-cell-title">JavaScript</div> 
+                                <div class="js-cell-content">
+                                    <div class="full-dot"></div>
+                                    <div class="full-dot"></div>
+                                    <div class="empty-dot"></div>
+                                    <div class="empty-dot"></div>
+                                    <div class="empty-dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="ml-cell">
+                                <div class="ml-cell-title">Matlab</div> 
+                                <div class="ml-cell-content">
+                                    <div class="full-dot"></div>
+                                    <div class="full-dot"></div>
+                                    <div class="empty-dot"></div>
+                                    <div class="empty-dot"></div>
+                                    <div class="empty-dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="py-cell">
+                                <div class="py-cell-title">Python</div> 
+                                <div class="py-cell-content">
+                                    <div class="full-dot"></div>
+                                    <div class="half-dot"></div>
+                                    <div class="empty-dot"></div>
+                                    <div class="empty-dot"></div>
+                                    <div class="empty-dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="ac-cell">
+                                <div class="ac-cell-title">AutoCAD</div> 
+                                <div class="ac-cell-content">
+                                    <div class="full-dot"></div>
+                                    <div class="full-dot"></div>
+                                    <div class="full-dot"></div>
+                                    <div class="full-dot"></div>
+                                    <div class="empty-dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="sp-cell">
+                                <div class="sp-cell-title">SoundPLAN</div> 
+                                <div class="sp-cell-content">
+                                    <div class="full-dot"></div>
+                                    <div class="full-dot"></div>
+                                    <div class="full-dot"></div>
+                                    <div class="half-dot"></div>
+                                    <div class="empty-dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="ag-cell">
+                                <div class="ag-cell-title">Angular</div> 
+                                <div class="ag-cell-content"> In progress... </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="hobby-right-section">
+                <div class="hobby-big-sqr">
+                    <div class="hobby-small-sqr">
+                        <div class="hobby-content-sqr">
+                            <h1>Hobbies</h1>
+
+                            <div id="move-one" class="hobby-one">Ultra Run</div>
+                            <div id="move-two" class="hobby-two">Travel</div>
+                            <div id="" class="hobby-three">Acoustics</div>
+                            <div id="" class="hobby-four">Physics</div>
+                            <div id="" class="hobby-five">Gym</div>
+                            <div id="" class="hobby-six">Math</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="skill-container-mobile">
+
+             <div id="skill-background-mobile" class="skill-background"></div>
+
+
+            <div class="left-section-mobile"></div>
+
+
+            <div class="right-section-mobile">
+
+                <div class="skill-section-mobile">
+
+                    <div class="skill-big-sqr">
+                        <div class="skill-small-sqr">
+                            <div class="skill-content-sqr">
+                                <h1>Programming / Skills</h1>
+    
+                                <div class="html-cell">
+                                    <div class="html-cell-title">HTML</div> 
+                                    <div class="html-cell-content">
+                                        <div class="full-dot"></div>
+                                        <div class="full-dot"></div>
+                                        <div class="full-dot"></div>
+                                        <div class="full-dot"></div>
+                                        <div class="half-dot"></div>
+                                    </div>
+                                </div>
+    
+                                <div class="css-cell">
+                                    <div class="css-cell-title">CSS</div> 
+                                    <div class="css-cell-content">
+                                        <div class="full-dot"></div>
+                                        <div class="full-dot"></div>
+                                        <div class="full-dot"></div>
+                                        <div class="full-dot"></div>
+                                        <div class="empty-dot"></div>
+                                    </div>
+                                </div>
+    
+                                <div class="js-cell">
+                                    <div class="js-cell-title">JavaScript</div> 
+                                    <div class="js-cell-content">
+                                        <div class="full-dot"></div>
+                                        <div class="full-dot"></div>
+                                        <div class="empty-dot"></div>
+                                        <div class="empty-dot"></div>
+                                        <div class="empty-dot"></div>
+                                    </div>
+                                </div>
+    
+                                <div class="ml-cell">
+                                    <div class="ml-cell-title">Matlab</div> 
+                                    <div class="ml-cell-content">
+                                        <div class="full-dot"></div>
+                                        <div class="full-dot"></div>
+                                        <div class="empty-dot"></div>
+                                        <div class="empty-dot"></div>
+                                        <div class="empty-dot"></div>
+                                    </div>
+                                </div>
+    
+                                <div class="py-cell">
+                                    <div class="py-cell-title">Python</div> 
+                                    <div class="py-cell-content">
+                                        <div class="full-dot"></div>
+                                        <div class="half-dot"></div>
+                                        <div class="empty-dot"></div>
+                                        <div class="empty-dot"></div>
+                                        <div class="empty-dot"></div>
+                                    </div>
+                                </div>
+    
+                                <div class="ac-cell">
+                                    <div class="ac-cell-title">AutoCAD</div> 
+                                    <div class="ac-cell-content">
+                                        <div class="full-dot"></div>
+                                        <div class="full-dot"></div>
+                                        <div class="full-dot"></div>
+                                        <div class="full-dot"></div>
+                                        <div class="empty-dot"></div>
+                                    </div>
+                                </div>
+    
+                                <div class="sp-cell">
+                                    <div class="sp-cell-title">SoundPLAN</div> 
+                                    <div class="sp-cell-content">
+                                        <div class="full-dot"></div>
+                                        <div class="full-dot"></div>
+                                        <div class="full-dot"></div>
+                                        <div class="half-dot"></div>
+                                        <div class="empty-dot"></div>
+                                    </div>
+                                </div>
+    
+                                <div class="ag-cell">
+                                    <div class="ag-cell-title">Angular</div> 
+                                    <div class="ag-cell-content"> In progress... </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="hobby-section-mobile">
+
+                    <div class="hobby-big-sqr">
+                        <div class="hobby-small-sqr">
+                            <div class="hobby-content-sqr">
+                                <h1>Hobbies</h1>
+    
+                                <div id="move-one" class="hobby-one">Ultra Run</div>
+                                <div id="move-two" class="hobby-two">Travel</div>
+                                <div id="" class="hobby-three">Acoustics</div>
+                                <div id="" class="hobby-four">Physics</div>
+                                <div id="" class="hobby-five">Gym</div>
+                                <div id="" class="hobby-six">Math</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                
+
+            </div>
+
+        </div>
+
+
+        <div class="project-container">
+
+            <div class="project-background"></div>
+
+            <div class="swiper mySwiper">
+
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide" id="TranslatorThree">
+                        <div class="project-big">
+                            <div class="project-small">
+                                <div class="project-content">
+                                    <div class="project-title"><h1>Tłumacz PJM</h1></div>
+                                    <div class="project-description">Polish Language translator to PJM </br>(Demo)</div>
+                                    <div class="project-languages">
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">CSS</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">HTML</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="helf-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">JavaScript</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-smalltr"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide" id="KraftThree">
+                        <div class="project-big">
+                            <div class="project-small">
+                                <div class="project-content">
+                                    <div class="project-title"><h1>Kraft Meble</h1></div>
+                                    <div class="project-description">Website for carpentry company </br>(Real Host)</div>
+                                    <div class="project-languages">
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">CSS</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">HTML</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">JavaScript</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-smalltr"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide" id="SayColorThree">
+                        <div class="project-big">
+                            <div class="project-small">
+                                <div class="project-content">
+                                    <div class="project-title"><h1>SayColor</h1></div>
+                                    <div class="project-description">Mini website game </br>(Demo)</div>
+                                    <div class="project-languages">
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">CSS</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">HTML</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">JavaScript</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-smalltr"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <div class="project-big">
+                            <div class="project-small">
+                                <div class="project-content">
+                                    <div class="project-title"><h1>CarDetailing</h1></div>
+                                    <div class="project-description">Website for a fictional company </br>(Demo)</div>
+                                    <div class="project-languages">
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">CSS</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">HTML</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">JavaScript</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-smalltr"></div>
+                        </div>
+
+                    </div>
+
+                  
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- <div class="swiper-pagination"></div> -->
+                
+            </div>
+
+
+            <div class="swiper mySwiperMobile-TwoCol">
+
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide" id="TranslatorTwo">
+                        <div class="project-big">
+                            <div class="project-small">
+                                <div class="project-content">
+                                    <div class="project-title"><h1>Tłumacz PJM</h1></div>
+                                    <div class="project-description">Polish Language translator to PJM </br>(Demo)</div>
+                                    <div class="project-languages">
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">CSS</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">HTML</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="helf-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">JavaScript</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-smalltr"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide" id="KraftTwo">
+                        <div class="project-big">
+                            <div class="project-small">
+                                <div class="project-content">
+                                    <div class="project-title"><h1>Kraft Meble</h1></div>
+                                    <div class="project-description">Website for carpentry company </br>(Real Host)</div>
+                                    <div class="project-languages">
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">CSS</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">HTML</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">JavaScript</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-smalltr"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide" id="SayColorTwo">
+                        <div class="project-big">
+                            <div class="project-small">
+                                <div class="project-content">
+                                    <div class="project-title"><h1>SayColor</h1></div>
+                                    <div class="project-description">Mini website game </br>(Demo)</div>
+                                    <div class="project-languages">
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">CSS</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">HTML</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">JavaScript</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-smalltr"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <div class="project-big">
+                            <div class="project-small">
+                                <div class="project-content">
+                                    <div class="project-title"><h1>CarDetailing</h1></div>
+                                    <div class="project-description">Website for a fictional company </br>(Demo)</div>
+                                    <div class="project-languages">
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">CSS</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">HTML</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">JavaScript</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-smalltr"></div>
+                        </div>
+
+                    </div>
+
+                  
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- <div class="swiper-pagination"></div> -->
+                
+            </div>
+
+            <div class="swiper mySwiperMobile-OneCol">
+
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide" id="TranslatorOne">
+                        <div class="project-big">
+                            <div class="project-small">
+                                <div class="project-content">
+                                    <div class="project-title"><h1>Tłumacz PJM</h1></div>
+                                    <div class="project-description">Polish Language translator to PJM </br>(Demo)</div>
+                                    <div class="project-languages">
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">CSS</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">HTML</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="helf-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">JavaScript</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-smalltr"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide" id="KraftOne">
+                        <div class="project-big">
+                            <div class="project-small">
+                                <div class="project-content">
+                                    <div class="project-title"><h1>Kraft Meble</h1></div>
+                                    <div class="project-description">Website for carpentry company </br>(Real Host)</div>
+                                    <div class="project-languages">
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">CSS</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">HTML</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">JavaScript</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-smalltr"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide" id="SayColorOne">
+                        <div class="project-big">
+                            <div class="project-small">
+                                <div class="project-content">
+                                    <div class="project-title"><h1>SayColor</h1></div>
+                                    <div class="project-description">Mini website game </br>(Demo)</div>
+                                    <div class="project-languages">
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">CSS</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">HTML</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">JavaScript</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-smalltr"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <div class="project-big">
+                            <div class="project-small">
+                                <div class="project-content">
+                                    <div class="project-title"><h1>CarDetailing</h1></div>
+                                    <div class="project-description">Website for a fictional company </br>(Demo)</div>
+                                    <div class="project-languages">
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">CSS</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">HTML</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-one-languages">
+                                            <div class="project-language-title">JavaScript</div> 
+                                            <div class="project-rate">
+                                                <div class="full-dot"></div>
+                                                <div class="half-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                                <div class="empty-dot"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-smalltr"></div>
+                        </div>
+
+                    </div>
+
+                  
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- <div class="swiper-pagination"></div> -->
+                
+            </div>
+
+        
+        </div>
+
+
+        <div class="contact-container">
+
+            <div id="contact-background" class="contact-background"></div>
+
+            <div class="contact-section">
+                <div class="contact-big-sqr">
+                    <div class="contact-small-sqr">
+                        <div class="contact-content-sqr">
+                            <h1>Contact</h1>
+                        </br>
+                            <div> <i class='bx bx-envelope'></i> kwiek.kp@gmail.com </div>
+                            <div> <i class='bx bxl-github'></i> www.github.com/fkldjfg</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+
+<script src="script.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 80,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+
+  var swiper = new Swiper(".mySwiperMobile-TwoCol", {
+    slidesPerView: 2,
+    spaceBetween: 80,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+
+  var swiper = new Swiper(".mySwiperMobile-OneCol", {
+    slidesPerView: 1,
+    spaceBetween: 80,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
