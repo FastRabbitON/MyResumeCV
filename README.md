@@ -3,10 +3,8 @@ Project available under link: \
 **https://srv49151.seohost.com.pl**
 
 ## Table of Contents
-
 * [General Information](#general-information)
 * [Technologies Used](#technologies-used)
-* [Features](#features)
 * [Change Log](#change-log)
 * [Project Status](#project-status)
 * [Contact](#contact)
@@ -18,9 +16,6 @@ Resume website that show all my procjct and skills.
 - HTML
 - CSS
 - JavaScript
-
-## Features
-
 
 ## Change Log
 20-11-2022: First version;
