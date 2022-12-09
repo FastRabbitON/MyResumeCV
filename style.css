@@ -785,7 +785,7 @@ main {
 
 .about-container-mobile {
     padding: 5rem;
-    height: 160vh;
+    height: 1200px;
     width: 100vw;
     display: none;
     -webkit-box-orient: vertical;
@@ -803,7 +803,7 @@ main {
 
 /* SKILL Container */
 .skill-container {
-    height: 120vh;
+    height: 800px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -820,7 +820,7 @@ main {
 }
 
 .skill-container-mobile {
-    height: 170vh;
+    height: 1100px;
     width: 100%;
     display: none;
     -webkit-box-orient: horizontal;
@@ -1407,7 +1407,7 @@ main {
 
 /* PROJECTS Container */
 .project-container {
-    height: 120vh;
+    height: 850px;
     width: 100vw;
     position: relative;
     display: -webkit-box;
@@ -1433,14 +1433,14 @@ main {
 
 .swiper.mySwiperMobile-TwoCol {
     width: 80vw;
-    height: 65vh;
+    height: 500px;
     padding: 5rem;
     display: none;
 }
 
 .swiper.mySwiperMobile-OneCol {
     width: 55vw;
-    height: 65vh;
+    height: 500px;
     padding: 5rem;
     display: none;
 }
@@ -1669,7 +1669,7 @@ main {
 
 /* CONTACT Container */
 .contact-container {
-    height: 120vh;
+    height: 900px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1700,7 +1700,7 @@ main {
 
 
 .contact-section {
-    height: 35vh;
+    height: 250px;
     /*Size of Contact Section*/
     width: 30vw;
     /*Size of Contact Section*/
@@ -1952,7 +1952,6 @@ main {
 
     /* Contact Section */
     .contact-section {
-        height: 40vh;
         /*Size of Contact Section*/
         width: 35vw;
         /*Size of Contact Section*/
@@ -2004,7 +2003,6 @@ main {
 
     /* Contact Section */
     .contact-section {
-        height: 43vh;
         /*Size of Contact Section*/
         width: 35vw;
         /*Size of Contact Section*/
@@ -2083,7 +2081,6 @@ main {
 
     /* Contact Section */
     .contact-section {
-        height: 43vh;
         /*Size of Contact Section*/
         width: 40vw;
         /*Size of Contact Section*/
@@ -2128,7 +2125,7 @@ main {
     }
 
     .background-about {
-        height: 167vh;
+        height: 1250px;
     }
 
     .square.on {
@@ -2220,9 +2217,6 @@ main {
         /*Size of Welcome Section*/
     }
 
-    .background-about {
-        height: 167vh;
-    }
 
 
     .skill-background {
@@ -2271,7 +2265,7 @@ main {
     }
 
     .background-about {
-        height: 159vh;
+        height: 1190px;
     }
 
     .welcome-section {
