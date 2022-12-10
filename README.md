@@ -19,6 +19,7 @@ Resume website that show all my procjct and skills.
 
 ## Change Log
 20-11-2022: First version;
+11-12-2022: Resize optimization;
 
 ## Project Status
 The website under development.
