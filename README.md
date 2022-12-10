@@ -18,8 +18,8 @@ Resume website that show all my procjct and skills.
 - JavaScript
 
 ## Change Log
-20-11-2022: First version;
-11-12-2022: Resize optimization;
+- 20-11-2022: First version; 
+- 11-12-2022: Resize optimization;
 
 ## Project Status
 The website under development.
