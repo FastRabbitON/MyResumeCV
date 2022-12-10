@@ -65,36 +65,36 @@ main {
 /* Anchors */
 #about {
     position: absolute;
-    top: 0vh;
+    top: 0px;
     z-index: 2;
-    /* background-color: pink; */
+    background-color: pink;
     height: 1rem;
     width: 1rem;
 }
 
 #skills{
     position: absolute;
-    top: 100vh;
+    top: 800px;
     z-index: 2;
-    /* background-color: pink; */
+    background-color: pink;
     height: 1rem;
     width: 1rem;
 }
 
 #projects{
     position: absolute;
-    top: 220vh;  
+    top: 1650px;  
     z-index: 2;
-    /* background-color: pink; */
+    background-color: pink;
     height: 1rem;
     width: 1rem;  
 } 
 
 #contact{
     position: absolute;
-    top: 350vh;
+    top: 2500px;
     z-index: 2;
-    /* background-color: pink; */
+    background-color: pink;
     height: 1rem;
     width: 1rem;
 }
@@ -126,7 +126,7 @@ main {
 }
 
 .nav-container {
-    width: 50%;
+    width: 850px;
     /*Size of Nav Button Section*/
     height: 100%;
     /*Size of Nav Button Section*/
@@ -391,6 +391,7 @@ main {
 }
 
 .about-container {
+    padding: 2rem;
     height: 700px;
     width: 100vw;
     display: -webkit-box;
@@ -441,7 +442,7 @@ main {
     flex-direction: column;
     height: 55%;
     /*Size of Welcome Section*/
-    width: 50%;
+    width: 350px;
     /*Size of Welcome Section*/
     background: rgba(255, 255, 255, 0.14);
     border-radius: 16px;
@@ -521,7 +522,7 @@ main {
 .about-big-sqr {
     margin-top: 10rem;
     position: relative;
-    width: 70%;
+    width: 450px;
     /*Size of About Section*/
     height: 50%;
     /*Size of About Section*/
@@ -562,6 +563,7 @@ main {
 .about-content-sqr {
     height: 80%;
     width: 98%;
+    padding: 0.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -609,7 +611,7 @@ main {
 .avatar-big-sqr {
     margin-top: 10rem;
     position: relative;
-    width: 50%;
+    width: 350px;
     /*Size of Avatar Section*/
     height: 60%;
     /*Size of Avatar Section*/
@@ -685,9 +687,9 @@ main {
     /*Size of Radio Buttons Section*/
     width: 15%;
     /*Size of Radio Buttons Section*/
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
+    display: none;
+    display: none;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -801,6 +803,8 @@ main {
 }
 
 
+
+
 /* SKILL Container */
 .skill-container {
     height: 800px;
@@ -907,14 +911,6 @@ main {
 }
 
 
-/* .skill-background img{
-    filter: brightness(65%) grayscale(15%);
-    height: 100%;
-    width: 100%;                                    
-    object-fit: none;
-    position: absolute;
-    object-position: 0 -10rem;
-}  */
 
 
 /* SKILL Section */
@@ -952,9 +948,9 @@ main {
 
 
 .skill-big-sqr {
-    margin-top: 10rem;
+    margin: auto 0;
     position: relative;
-    width: 70%;
+    width: 450px;
     /*Size of Skills Section*/
     height: 55%;
     /*Size of Skills Section*/
@@ -993,7 +989,7 @@ main {
 
 
 .skill-content-sqr {
-    height: 85%;
+    height: 90%;
     /*Size of Content in Skills Section*/
     width: 80%;
     /*Size of Content in Skills Section*/
@@ -1010,8 +1006,6 @@ main {
     font-size: 2.8rem;
     /*Font Size of Title Skill Section*/
     position: absolute;
-    top: 0;
-    left: 1rem;
     cursor: default;
 }
 
@@ -1084,7 +1078,7 @@ main {
 }
 
 .css-cell-title, .html-cell-title, .js-cell-title, .ml-cell-title, .py-cell-title, .ac-cell-title, .sp-cell-title, .ag-cell-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     /*Font Size of Cells in Skill Section*/
     font-weight: 600;
     margin-bottom: 1rem;
@@ -1183,9 +1177,9 @@ main {
 }
 
 .hobby-big-sqr {
-    margin-top: 10rem;
+    margin: auto 0;
     position: relative;
-    width: 50%;
+    width: 320px;
     /*Size of Hobby Section*/
     height: 55%;
     /*Size of Hobby Section*/
@@ -1254,9 +1248,9 @@ main {
 .hobby-content-sqr h1 {
     position: absolute;
     top: 0;
-    left: -3rem;
+    left: -3.5rem;
     cursor: default;
-    font-size: 3rem;
+    font-size: 2.8rem;
     /*Font Size of Title Hobby Section*/
 }
 
@@ -1577,9 +1571,9 @@ main {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-transform: skewX(5deg);
+    /* -webkit-transform: skewX(5deg);
     -ms-transform: skewX(5deg);
-    transform: skewX(5deg);
+    transform: skewX(5deg); */
 }
 
 
@@ -1702,7 +1696,7 @@ main {
 .contact-section {
     height: 250px;
     /*Size of Contact Section*/
-    width: 30vw;
+    width: 500px;
     /*Size of Contact Section*/
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1810,164 +1804,6 @@ main {
 @media only screen and (max-width: 1400px) {
 
 
-    /* DOTS SETTINGS */
-    .full-dot {
-        height: 1.8rem;
-        /*Size of Full Dots*/
-        width: 1.8rem;
-        /*Size of Full Dots*/
-    }
-
-    .empty-dot {
-        height: 1.8rem;
-        /*Size of Empty Dots*/
-        width: 1.8rem;
-        /*Size of Empty Dots*/
-    }
-
-    .half-dot {
-        width: 0.9rem;
-        /*Size of Half Dots*/
-        height: 1.8rem;
-        /*Size of Half Dots*/
-    }
-
-
-    /* WELCOME Section */
-    .welcome-section {
-        height: 55%;
-        /*Size of Welcome Section*/
-        width: 55%;
-        /*Size of Welcome Section*/
-    }
-
-
-
-
-    /* AVATAR Section */
-    .radiobuttons {
-        height: 10%;
-        /*Size of Radio Buttons Section*/
-        width: 20%;
-        /*Size of Radio Buttons Section*/
-    }
-
-
-
-    /* SKILL Section*/
-    .skill-big-sqr {
-        width: 75%;
-        /*Size of Skills Section*/
-        height: 55%;
-        /*Size of Skills Section*/
-    }
-
-    .skill-content-sqr {
-        height: 90%;
-        /*Size of Content in Skills Section*/
-        width: 75%;
-        /*Size of Content in Skills Section*/
-        line-height: 2.5rem;
-    }
-
-
-    .skill-content-sqr h1 {
-        font-size: 2.2rem;
-        /*Font Size of Title Skill Section*/
-    }
-
-    .css-cell, .html-cell, .js-cell, .ml-cell, .py-cell, .ac-cell, .sp-cell, .ag-cell {
-        padding: 0.8rem;
-        height: 4.6rem;
-        /*Size of Cells in Skills Section*/
-        width: 13rem;
-        /*Size of Cells in Skills Section*/
-    }
-
-    .css-cell-title, .html-cell-title, .js-cell-title, .ml-cell-title, .py-cell-title, .ac-cell-title, .sp-cell-title, .ag-cell-title {
-        font-size: 1.5rem;
-        /*Font Size of Cells in Skill Section*/
-        font-weight: 600;
-        margin-bottom: 1.2rem;
-    }
-
-
-    /* HOBBY Section */
-    .hobby-big-sqr {
-        margin-top: 10rem;
-        width: 55%;
-        /*Size of Hobby Section*/
-        height: 55%;
-        /*Size of Hobby Section*/
-    }
-
-    .hobby-content-sqr {
-        height: 80%;
-        /*Size of Content in Hobby Section*/
-        width: 45%;
-        /*Size of Content in Hobby Section*/
-    }
-
-    /* Hobby Title */
-    .hobby-content-sqr h1 {
-        font-size: 2.5rem;
-        /*Font Size of Title Hobby Section*/
-    }
-
-    .hobby-one, .hobby-two, .hobby-three, .hobby-four, .hobby-five, .hobby-six {
-        padding: 1rem;
-        height: 4rem;
-        /*Size of Cells in Hobby Section*/
-        width: 12rem;
-        /*Size of Cells in Hobby Section*/
-        font-size: 1.5rem;
-        /*Font Size of Cells in Hobby Section*/
-    }
-
-
-    .project-title h1 {
-        font-size: 3rem;
-        /*Font Size of Title in Square*/
-        margin-bottom: 2.5rem;
-    }
-
-    .project-description {
-        font-size: 1.5rem;
-        /*Font Size of Description in Square*/
-        margin-bottom: 4rem;
-    }
-
-    .project-languages {
-        height: 50%;
-        /*Size of Content Languages in Square*/
-        width: 90%;
-        /*Size of Content Languages in Square*/
-    }
-
-    .project-language-title {
-        font-size: 1.5rem;
-        /*Font Size of Languages in Square*/
-    }
-
-
-    /* Contact Section */
-    .contact-section {
-        /*Size of Contact Section*/
-        width: 35vw;
-        /*Size of Contact Section*/
-        top: 5rem;
-    }
-
-    .contact-content-sqr h1 {
-        font-size: 2rem;
-        /*Font Size of Title in Contact Section*/
-    }
-
-    .contact-content-sqr div {
-        font-size: 1.5rem;
-        /*Font Size of Content in Contact Section*/
-    }
-
     .contact-background {
         background-position: 0rem 0rem;
         background-size: 130%;
@@ -1976,11 +1812,9 @@ main {
 
 
 
+
 @media only screen and (max-width: 1300px) {
-    .nav-container {
-        width: 65%;
-        /*Size of Nav Button Section*/
-    }
+
 
 
     /*Background Skill Scaling (position)*/
@@ -2001,13 +1835,6 @@ main {
         /*Size of Swiper*/
     }
 
-    /* Contact Section */
-    .contact-section {
-        /*Size of Contact Section*/
-        width: 35vw;
-        /*Size of Contact Section*/
-        top: 5rem;
-    }
 
 }
 
@@ -2015,33 +1842,12 @@ main {
 
 @media only screen and (max-width: 1200px) {
 
-    /* WELCOME Section */
-    .welcome-section {
-        height: 60%;
-        /*Size of Welcome Section*/
-        width: 65%;
-        /*Size of Welcome Section*/
+    .skill-left-section{
+        width: 55%;
     }
 
-    .line-one {
-        margin-left: 8rem;
-        position: relative;
-        font-size: 6rem;
-        /*Font Size Welcome Section*/
-        font-weight: 600;
-    }
-
-    .line-two, .line-three {
-        margin-left: 8rem;
-        font-size: 4rem;
-        /*Font Size Welcome Section*/
-    }
-
-    .color-one-mark, .color-two-mark {
-        height: 3.5rem;
-        /*Font Size of Radio Buttons*/
-        width: 3.5rem;
-        /*Font Size of Radio Buttons*/
+    .hobby-right-section{
+        width: 45%;
     }
 
 
@@ -2051,21 +1857,6 @@ main {
         /*Background Position*/
     }
 
-    .skill-left-section {
-        width: 50%;
-    }
-
-    .hobby-right-section {
-        width: 45%;
-    }
-
-    /* Hobby Title */
-    .hobby-content-sqr h1 {
-        top: 0;
-        left: -1rem;
-        font-size: 2.8rem;
-        /*Font Size of Title Hobby Section*/
-    }
 
     .swiper.mySwiperMobile-TwoCol {
         display: -webkit-box;
@@ -2079,14 +1870,6 @@ main {
     }
 
 
-    /* Contact Section */
-    .contact-section {
-        /*Size of Contact Section*/
-        width: 40vw;
-        /*Size of Contact Section*/
-        top: 5rem;
-    }
-
     .contact-background {
         background-position: 0rem 0rem;
         background-size: 155%;
@@ -2098,20 +1881,19 @@ main {
 @media only screen and (max-width: 1050px) {
     
     #skills{
-        top: 170vh;
+        top: 1255px;
     }
 
     #projects{
-    top: 350vh;
+    top: 2450px;
     }
 
     #contact{
-    top: 470vh;
+    top: 3250px;
     }
     
     .nav-container {
-        width: 80%;
-        /*Size of Nav Button Section*/
+        width: 750px;
     }
 
     .about-container {
@@ -2125,18 +1907,13 @@ main {
     }
 
     .background-about {
-        height: 1250px;
+        height: 1255px;
     }
 
-    .square.on {
-        height: 170vh;
-        width: 170vw;
-    }
 
     .welcome-section {
-        height: 50%;
-        /*Size of Welcome Section*/
-        width: 40%;
+        height: 350px;
+        width: 375px;
         /*Size of Welcome Section*/
     }
 
@@ -2144,20 +1921,15 @@ main {
     .avatar-big-sqr {
         margin-bottom: 4rem;
         margin-top: 10rem;
-        width: 35%;
         /*Size of Avatar Section*/
-        height: 60%;
         /*Size of Avatar Section*/
     }
 
-    .radiobuttons {
-        width: 13%;
-    }
 
     .about-big-sqr {
-        width: 60%;
+        width: 550px;
         /*Size of About Section*/
-        height: 40%;
+        height: 300px;
         /*Size of About Section*/
     }
 
@@ -2178,25 +1950,22 @@ main {
         display: flex;
     }
 
-    .skill-big-sqr, .hobby-big-sqr {
-        -webkit-transform: skewX(-5deg);
-        -ms-transform: skewX(-5deg);
-        transform: skewX(-5deg);
-        margin-left: 5rem;
-        margin-top: 5rem;
-        width: 70%;
+    .skill-big-sqr{
+        width: 450px;
         /*Size of Skills and Hobby Section*/
-        height: 80%;
+        height: 450px;
         /*Size of Skills Section*/
     }
 
-    .skill-big-sqr{
-        height: 85%;
+    .hobby-big-sqr {
+        width: 350px;
+        height: 450px;
     }
 
     .contact-section {
-        width: 50vw;
         top: 5rem;
+        left: auto;
+        right: auto;
     }
 
     .contact-background {
@@ -2210,29 +1979,9 @@ main {
 @media only screen and (max-width: 1000px) {
 
 
-    .welcome-section {
-        height: 45%;
-        /*Size of Welcome Section*/
-        width: 45%;
-        /*Size of Welcome Section*/
-    }
-
-
-
     .skill-background {
         background-position: -25rem -10rem;
         background-size: 160%;
-    }
-
-    .skill-big-sqr, .hobby-big-sqr {
-        margin-left: 2rem;
-        width: 80%;
-        /*Size of Skills and Hobby Section*/
-    }
-
-    .contact-section {
-        left: 10rem;
-        top: 10rem;
     }
 
     .contact-background {
@@ -2265,47 +2014,30 @@ main {
     }
 
     .background-about {
-        height: 1190px;
-    }
-
-    .welcome-section {
-        height: 45%;
-        /*Size of Welcome Section*/
-        width: 55%;
-        /*Size of Welcome Section*/
-    }
-
-    .radiobuttons {
-        width: 15%;
-    }
-
-    .about-big-sqr {
-        width: 70%;
-        /*Size of About Section*/
-        height: 50%;
-        /*Size of About Section*/
+        height: 1195px;
     }
 
 
 
     .skill-container-mobile .left-section-mobile {
-        width: 10%;
+        width: 0%;
     }
 
     .skill-container-mobile .right-section-mobile {
-        width: 90%;
+        width: 100%;
     }
 
 
-    .skill-big-sqr, .hobby-big-sqr {
-        margin-left: 10rem;
-        width: 60%;
-        /*Size of Skills and Hobby Section*/
+    .skill-big-sqr {
+        margin: 0 auto;
+
     }
 
-    .skill-content-sqr{
-        width: 80%;
+    .hobby-big-sqr{
+        margin: 0 25rem 0 auto;
     }
+
+
 
     .skill-background {
         background-position: -35rem -12rem;
@@ -2323,11 +2055,6 @@ main {
         display: flex;
     }
 
-    .contact-section {
-        width: 60vw;
-        left: 10rem;
-        top: 10rem;
-    }
 
     .contact-background {
         background-position: -10rem 0rem;
@@ -2337,81 +2064,27 @@ main {
 
 @media only screen and (max-width: 740px) {
     
-    .skill-big-sqr, .hobby-big-sqr {
-        margin-left: 8rem;
-        width: 65%;
-        /*Size of Skills and Hobby Section*/
+    .about-big-sqr{
+       width: 500px; 
     }
-    
+
+    .hobby-big-sqr{
+        margin: 0 auto;
+    }
+
     .skill-background {
         background-position: -35rem -12rem;
         background-size: 200%;
     }
 
-    .contact-section {
-        width: 60vw;
-        left: 10rem;
-        top: 5rem;
-    }
-
     .contact-background {
         background-position: -5rem 0rem;
-        background-size: 220%;
+        background-size: 250%;
     }
 }
 
 @media only screen and (max-width: 660px) {
 
-    .welcome-section {
-        height: 45%;
-        /*Size of Welcome Section*/
-        width: 70%;
-        /*Size of Welcome Section*/
-    }
-
-    .line-one {
-        margin-left: 8.5rem;
-        position: relative;
-        font-size: 5rem;
-        /*Font Size Welcome Section*/
-        font-weight: 600;
-    }
-
-    .line-two, .line-three {
-        margin-left: 8.5rem;
-        font-size: 3rem;
-        /*Font Size Welcome Section*/
-    }
-
-    .line-one::before {
-        font-size: 2rem;
-        /*Font Size Welcome Section*/
-        top: -5px;
-        left: -60px;
-    }
-    
-    .line-three::after {
-        font-size: 2rem;
-        /*Font Size Welcome Section*/
-        bottom: -12px;
-        left: 130px;
-    }
-
-
-    .avatar-big-sqr{
-       width: 50%; 
-    }
-
-    .radiobuttons {
-        width: 20%;
-    }
-
-    .about-big-sqr {
-        width: 80%;
-        /*Size of About Section*/
-        height: 50%;
-        /*Size of About Section*/
-    }
 
     .skill-background{
         background-position: -35rem -12rem;
@@ -2420,18 +2093,6 @@ main {
 
     .swiper.mySwiperMobile-OneCol {
         width: 65%;
-    }
-
-    .skill-big-sqr, .hobby-big-sqr {
-        margin-left: 8rem;
-        width: 65%;
-        /*Size of Skills and Hobby Section*/
-    }
-
-    .contact-section {
-        width: 70vw;
-        left: 7rem;
-        top: 5rem;
     }
 
     .contact-background {
@@ -2443,181 +2104,51 @@ main {
 
 @media only screen and (max-width: 600px) {
 
+    
+    .welcome-section{
+        width: 300px;
+        height: 180px;
+    }
+
+    .avatar-big-sqr{
+        height: 350px;
+        width: 250px;
+    }
+
+    .about-big-sqr{
+        height: 200px;
+        width: 350px;
+    }
+
+    .line-one, .line-two, .line-three{
+        font-size: 3.5rem;
+    }
+
+    .line-one::before, .line-three::after{
+        font-size: 1.5rem;
+    }
+
     .skill-background{
         background-position: -35rem -12rem;
         background-size: 250%;   
     }
 
-    .skill-content-sqr{
-      width: 85%;  
-    }
-
-    .swiper.mySwiperMobile-OneCol {
-        width: 70%;
-    }
-
-    .skill-big-sqr, .hobby-big-sqr{
-        margin-left: 4rem;
-        width: 75%;
-    }
-
-    .contact-section {
-        width: 75vw;
-    }
-
-}
-
-@media only screen and (max-width: 550px) {
-    
-    .skill-background{
-        background-position: -35rem -12rem;
-        background-size: 280%;   
-    }
-    
-    .skill-container-mobile .left-section-mobile {
-        width: 0%;
-    }
-
-    .skill-container-mobile .right-section-mobile {
-        width: 100%;
-    }
-
-    .skill-content-sqr{
-        width: 90%;  
-    }
-
-    .skill-big-sqr, .hobby-big-sqr{
-        margin-left: 5.2rem;
-        width: 75%;
-    }
-
-    .swiper.mySwiperMobile-OneCol {
-        width: 75%;
-        height: 60%;
-    }
-
-    .contact-background {
-        background-position: -25rem 0rem;
-        background-size: 350%;
-    }
-
-    .contact-section {
-        width: 85vw;
-        left: 2rem;
-        top: 5rem;
-    }
-
-}
-
-@media only screen and (max-width: 500px) {
-    
-    .burgermenu-container{
-        width: 6rem;
-        height: 6rem; 
-    }
-
-    .welcome-section {
-        height: 45%;
-        /*Size of Welcome Section*/
-        width: 80%;
-        /*Size of Welcome Section*/
-    }
-
-    .avatar-big-sqr{
-        width: 60%;
-    }
-
-    .radiobuttons{
-        width: 25%;
-    }
-
-    .about-big-sqr{
-       height: 60%;
-       width: 85%; 
+    .skill-big-sqr{
+        width: 320px;
+        height: 425px;
     }
 
 
-    .swiper.mySwiperMobile-OneCol {
-        width: 80%;
-        height: 60%;
+    .hobby-big-sqr{
+        width: 320px;
     }
 
-    .contact-section {
-        width: 90vw;
-        left: 2rem;
-        top: 5rem;
-    }
-}
-
-
-@media only screen and (max-width: 460px) {
-    .welcome-section {
-        height: 45%;
-        /*Size of Welcome Section*/
-        width: 95%;
-        /*Size of Welcome Section*/
-    }
-
-    .line-one {
-        margin-left: 8.5rem;
-        position: relative;
-        font-size: 5rem;
-        /*Font Size Welcome Section*/
-        font-weight: 600;
-    }
-
-    .line-two, .line-three {
-        margin-left: 8.5rem;
-        font-size: 3rem;
-        /*Font Size Welcome Section*/
-    }
-
-    .line-one::before {
+    .skill-content-sqr h1 , .hobby-content-sqr h1{
         font-size: 2rem;
-        /*Font Size Welcome Section*/
-        top: -5px;
-        left: -60px;
-    }
-
-    .line-three::after {
-        font-size: 2rem;
-        /*Font Size Welcome Section*/
-        bottom: -12px;
-        left: 140px;
-    }
-
-    .avatar-big-sqr{
-        width: 65%;
-    }
-
-    .color-one-mark, .color-two-mark {
-        height: 3rem;
-        /*Font Size of Radio Buttons*/
-        width: 3rem;
-        /*Font Size of Radio Buttons*/
-    }
-
-    .radiobuttons{
-        width: 35%;
-
-    }
-
-    .about-big-sqr{
-        width: 90%;
-    }
-
-    .skill-background{
-        background-position: -30rem -12rem;
-        background-size: 300%;   
-    }
-
-    .skill-content-sqr h1 {
-        font-size: 2rem;
-        /*Font Size of Title Skill Section*/
     }
 
     .css-cell, .html-cell, .js-cell, .ml-cell, .py-cell, .ac-cell, .sp-cell, .ag-cell {
-        padding: 0.8rem;
+        padding: 0.5rem;
         height: 4.6rem;
         /*Size of Cells in Skills Section*/
         width: 11rem;
@@ -2669,38 +2200,69 @@ main {
         /*Size of Half Dots*/
     }
 
+    .swiper.mySwiperMobile-OneCol {
+        width: 70%;
+    }
 
     .project-title h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         /*Font Size of Title in Square*/
-        color: var(--font-color);
-        margin-bottom: 2rem;
-    }
-    
-    .project-description {
-        font-size: 1.2rem;
-        /*Font Size of Description in Square*/
-        color: var(--font-color);
-        margin-bottom: 4rem;
     }
 
-    .project-language-title {
-        font-size: 1.2rem;
-        /*Font Size of Languages in Square*/
+    .contact-section {
+        top: 5rem;
     }
     
+
+}
+
+@media only screen and (max-width: 550px) {
+    
+    .skill-background{
+        background-position: -35rem -12rem;
+        background-size: 280%;   
+    }
+
     .contact-section{
-        width: 95vw;
-        left: 0rem;
-        top: 0rem;    
-    }
-
-    .contact-big-sqr{
-        width: 75%;
+        width: 395px;
     }
 
     .contact-content-sqr div{
         font-size: 1.2rem;
+    }
+    
+   
+    .swiper.mySwiperMobile-OneCol {
+        width: 395px;
+        height: 60%;
+    }
+
+
+    .contact-background {
+        background-position: -25rem 0rem;
+        background-size: 350%;
+    }
+
+
+}
+
+@media only screen and (max-width: 500px) {
+    
+    .burgermenu-container{
+        width: 6rem;
+        height: 6rem; 
+    }
+
+
+
+}
+
+
+@media only screen and (max-width: 460px) {
+    
+    .skill-background{
+        background-position: -30rem -12rem;
+        background-size: 300%;   
     }
 
     .contact-background {
@@ -2713,84 +2275,42 @@ main {
 
 @media only screen and (max-width: 400px) {
 
-    .welcome-section {
-        height: 45%;
-        /*Size of Welcome Section*/
-        width: 90%;
-        /*Size of Welcome Section*/
-    }
-
-    .line-one {
-        margin-left: 6rem;
-        position: relative;
-        font-size: 3.8rem;
-        /*Font Size Welcome Section*/
-        font-weight: 600;
-    }
-
-    .line-two, .line-three {
-        margin-left: 6rem;
-        font-size: 2.2rem;
-        /*Font Size Welcome Section*/
-    }
-
-    .line-one::before {
-        font-size: 1.2rem;
-        /*Font Size Welcome Section*/
-        top: -20px;
-        left: -50px;
-    }
-
-    .line-three::after {
-        font-size: 1.5rem;
-        /*Font Size Welcome Section*/
-        bottom: -12px;
-        left: 130px;
-    }
-
-    .avatar-big-sqr{
-        width: 65%;
-    }
-
-    .color-one-mark, .color-two-mark {
-        height: 3rem;
-        /*Font Size of Radio Buttons*/
-        width: 3rem;
-        /*Font Size of Radio Buttons*/
-    }
-
-    .radiobuttons{
-        width: 35%;
-
-    }
-
     .about-big-sqr{
-        width: 90%;
-    }
-
-    .about-content-sqr div, .about-content-sqr b{
-        font-size: 1.2rem;
-    }
-
-    .skill-content-sqr h1, .hobby-content-sqr h1{
-        font-size: 1.5rem;
-    }
-
-    .skill-container-mobile{
-        height: 180vh;
+        width: 300px;  
     }
 
     .skill-background{
-        background-size: 310%;       
+        background-position: -30rem -12rem;
+        background-size: 340%;   
     }
 
+    .skill-big-sqr, .hobby-big-sqr{
+        width: 290px;
+        -webkit-transform: skewX(-3deg);
+        -ms-transform: skewX(-3deg);
+        transform: skewX(-3deg);
+    }
+
+    .skill-content-sqr {
+        width: 85%;
+    }
+
+    .contact-section{
+        width: 330px;
+    }
+
+    .swiper.mySwiperMobile-OneCol {
+        width: 330px;
+    }
 
     .contact-content-sqr div{
         font-size: 1rem;
     }
 
-    .contact-big-sqr{
-        width: 80%;
-    }
+}
+
+
+@media only screen and (max-width: 350px) {
+
 
 }

@@ -62,7 +62,7 @@ function ColorOne(){
             root.style.setProperty("--button-underline-color", "linear-gradient(90deg, #33ccff, #ff33cc)")
         }
     
-        console.log(window.scrollY)
+        // console.log(window.scrollY)
     })
 }
 
@@ -110,7 +110,7 @@ function ColorTwo(){
             root.style.setProperty("--button-underline-color", "linear-gradient(white, white)")
         }
     
-        console.log(window.scrollY)
+        // console.log(window.scrollY)
     })
 }
 
@@ -129,7 +129,7 @@ window.addEventListener("scroll", function(){
         root.style.setProperty("--button-underline-color", "linear-gradient(90deg, #33ccff, #ff33cc)")
     }
 
-    console.log(window.scrollY)
+    // console.log(window.scrollY)
 })
 
 
@@ -145,6 +145,8 @@ const SkillsMobile = document.getElementById("nav-button-skills-mobile");
 const ProjectsMobile = document.getElementById("nav-button-projects-mobile");
 const ContactMobile = document.getElementById("nav-button-contact-mobile");
 const GitMobile = document.getElementById("nav-button-github-mobile");
+
+const GitLink = document.getElementById("gitlink");
 
 
 About.onclick = function(){
@@ -163,6 +165,9 @@ Contact.onclick = function(){
     window.location='#contact';
 }
 
+Git.onclick = function(){
+    window.open('https://github.com/FastRabbitON', '_blank').focus();
+}
 
 
 AboutMobile.onclick = function(){
@@ -181,12 +186,18 @@ ContactMobile.onclick = function(){
     window.location='#contact';
 }
 
+GitMobile.onclick = function(){
+    window.open('https://github.com/FastRabbitON', '_blank').focus();
+}
 
 BurgerMenu.onclick = function(){
     BurgerMenu.classList.toggle("open");
     NavBarMobile.classList.toggle("open");
 }
 
+GitLink.onclick = function(){
+    window.open('https://github.com/FastRabbitON', '_blank').focus(); 
+}
 
 const KraftThree = document.getElementById("KraftThree");
 const KraftTwo = document.getElementById("KraftTwo");
