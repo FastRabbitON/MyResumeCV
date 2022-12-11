@@ -10,7 +10,7 @@ Project available under link: \
 * [Contact](#contact)
 
 ## General Information
-Resume website that show all my procjct and skills.
+Resume website that show all my projects and skills.
 
 ## Technologies Used
 - HTML
