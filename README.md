@@ -1,4 +1,4 @@
-# My Resume (CV)
+# My Resume (CV) 📋
 Project available under link: \
 **https://srv49151.seohost.com.pl**
 
