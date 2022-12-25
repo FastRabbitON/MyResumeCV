@@ -225,6 +225,10 @@ const TranslatorThree = document.getElementById("TranslatorThree");
 const TranslatorTwo = document.getElementById("TranslatorTwo");
 const TranslatorOne = document.getElementById("TranslatorOne");
 
+const WeatherAppThree = document.getElementById("WeatherAppThree");
+const WeatherAppTwo = document.getElementById("WeatherAppTwo");
+const WeatherAppOne = document.getElementById("WeatherAppOne");
+
 KraftThree.onclick = function () {
     window.open("https://meblekraft.com.pl", '_blank').focus();
 }
@@ -253,4 +257,18 @@ TranslatorTwo.onclick = function () {
 }
 TranslatorOne.onclick = function () {
     window.open("Projects/Translator/index.html", '_blank').focus();
+}
+
+
+
+WeatherAppThree.onclick = function () {
+    window.open("Projects/WeatherAppCompiled/index.html", '_blank').focus();
+}
+
+WeatherAppTwo.onclick = function () {
+    window.open("Projects/WeatherAppCompiled/index.html", '_blank').focus();
+}
+
+WeatherAppOne.onclick = function () {
+    window.open("Projects/WeatherAppCompiled/index.html", '_blank').focus();
 }
