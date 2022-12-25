@@ -20,6 +20,7 @@ Resume website that show all my projects and skills.
 ## Change Log
 - 20-11-2022: First version; 
 - 11-12-2022: Resize optimization;
+- 18-12-2022: Add new subdomain for all [projects](https://srv49151.seohost.com.pl/projects.html);
 
 ## Project Status
 The website under development.
