@@ -22,7 +22,8 @@ Resume website that show my projects, skills and general information about my.
 ## Change Log
 20-11-2022: First version; \
 11-12-2022: Resize optimization; \
-10-06-2023: Redesigning the page and rewriting it to React
+10-06-2023: Redesigning the page and rewriting it to React: \
+27-08-2023: Redesigning the page.
 
 ## Project Status
 The website under development.
