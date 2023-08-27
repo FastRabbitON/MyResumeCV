@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono&display=swap');
 
 
+:root {
+  --main-dark-color: #1f1e25;
+  --nav-bar-color: rgba(19, 16, 21, 0.5);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -33,7 +38,7 @@ html::-webkit-scrollbar {
 #AboutMe {
   position: absolute;
   z-index: 2;
-  top: 700px;
+  top: 650px;
   width: 10px;
   height: 10px;
   /* background-color: orangered; */
@@ -42,7 +47,7 @@ html::-webkit-scrollbar {
 #Projects {
   position: absolute;
   z-index: 2;
-  top: 1645px;
+  top: 1350px;
   width: 10px;
   height: 10px;
   /* background-color: rgb(51, 0, 255); */
@@ -51,7 +56,7 @@ html::-webkit-scrollbar {
 #Contact {
   position: absolute;
   z-index: 2;
-  top: 2400px;
+  top: 3500px;
   width: 10px;
   height: 10px;
   /* background-color: rgb(34, 255, 0); */
@@ -64,7 +69,7 @@ html::-webkit-scrollbar {
   position: fixed;
   height: 60px;
   width: 100vw;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -134,9 +139,9 @@ html::-webkit-scrollbar {
 
 
 
-.SectionOneContainer {
+.AboutMeContainer {
   width: 100vw;
-  height: 1600px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -148,7 +153,7 @@ html::-webkit-scrollbar {
   position: absolute;
   z-index: -1;
   width: 100vw;
-  height: 3200px;
+  height: 4550px;
   top: 0px;
   left: 0;
   background-image: url("./Asety/Background.jpg");
@@ -160,14 +165,15 @@ html::-webkit-scrollbar {
 }
 
 
-.EmptySpaceMe {
+.AboutMeEmpty {
   width: 100vw;
   height: 700px;
 }
 
-.ContentSpace {
-  width: 95vw;
-  height: 900px;
+.AboutMeContent {
+  width: 100%;
+  height: fit-content;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -206,20 +212,25 @@ html::-webkit-scrollbar {
 
 }
 
-.SecOneTop {
-  width: 90%;
-  height: 50%;
+.AboutMeSectionOne {
+  width: 100%;
+  height: 30rem;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
 }
 
 .MainText {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Spline Sans Mono', monospace;
-  font-size: 12rem;
+  font-size: 8rem;
   position: relative;
   cursor: pointer;
-
   background-image: linear-gradient(-60deg, #ffffff, #ffffff);
   background-size: 100%;
   background-repeat: repeat;
@@ -247,121 +258,54 @@ html::-webkit-scrollbar {
 }
 
 
-.SecOneBottom {
-  width: 95%;
-  height: 50%;
+.PhotoContainer {
+  height: 100%;
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.SecOneBottomLeft {
-  height: 100%;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-
-.SecOneBottomRight {
-  height: 100%;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.AboutMeFirstSquare {
-  width: 500;
-  height: 200;
-  background-color: transparent;
-  border: 0.3rem solid black;
-  border-radius: 10px;
-  position: relative;
-  transition: all 0.1s linear;
-  top: 0;
-}
-
-.AboutMeFirstSquare:hover {
-  transition: all 0.2s linear;
-  top: -10px;
-}
-
-
-.AboutMeFirstSquare:hover .SecondSquare,
-.AboutMeFirstSquare:hover .AboutMe div {
-  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
-  transition: background-image 0.2s ease-in-out;
-}
-
-.AboutMeSecondSquare {
-  position: relative;
-  top: 8px;
-  left: 10px;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(-60deg, #223034, #4b2f44);
-  border-radius: 10px;
-  transition: background-image 0.2s ease-in-out;
-}
-
-.AboutMeFirstSquare:hover .AboutMeSecondSquare {
-  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
-  transition: background-image 0.2s ease-in-out;
-}
-
-.AboutMeThirdSquare {
-  position: relative;
-  top: 10px;
-  left: 10px;
-  width: 100%;
-  height: 100%;
-  background-color: #1f1e1f;
-  border-radius: 10px;
-  padding: 1rem;
-  border: 0.3rem solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.AboutMeContainer {
-  width: 100%;
-  height: 100%;
-  display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
 }
 
-.AboutMe {
-  display: flex;
+.PhotoCV {
+  width: 28rem;
+  height: 28rem;
+  margin-bottom: 0.5rem;
 }
 
-.AboutMe div,
-.AboutMe b {
-  /* font-family: 'Spline Sans Mono', monospace; */
-  font-size: 1.5rem;
+.PhotoTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
   color: white;
 }
 
-.AboutMe div {
-  margin-left: 1rem;
-  background-image: linear-gradient(-60deg, #ffffff, #ffffff);
-  background-size: 100%;
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+
+
+/* SECTION */
+
+.AboutMeSectionTwo {
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
 }
 
-.AboutMe:hover div {
-  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
-}
 
+.SkillsContainer,
+.LanguagesContainer,
+.EducationContainer {
+  height: 100%;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* background-color: #ff33cc;
+  border: 0.1rem solid black; */
+}
 
 
 .SkillsFirstSquare {
@@ -409,7 +353,7 @@ html::-webkit-scrollbar {
   left: 10px;
   width: 100%;
   height: 100%;
-  background-color: #1f1e1f;
+  background-color: var(--main-dark-color);
   border-radius: 10px;
   padding: 1rem;
   border: 0.3rem solid black;
@@ -469,7 +413,7 @@ html::-webkit-scrollbar {
   border-bottom: solid 0.1rem white;
 }
 
-.SkillsContainer {
+.SkillsRateContainer {
   width: 75%;
   height: 95%;
   display: flex;
@@ -478,7 +422,6 @@ html::-webkit-scrollbar {
   align-items: flex-start;
 
 }
-
 
 .LabelSkill {
   color: white;
@@ -499,122 +442,325 @@ html::-webkit-scrollbar {
 }
 
 
-.SectionTwoContainer {
-  width: 100vw;
-  height: 800px;
-  background: #1f1e1f;
-  /* background-size: 300% 300%;
-  animation: gradient 5s infinite linear; */
+
+.LanguagesFirstSquare {
+  width: 300px;
+  height: 185px;
+  background-color: transparent;
+  border: 0.3rem solid black;
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.1s linear;
+  top: 0;
+}
+
+.LanguagesFirstSquare:hover {
+  transition: all 0.2s linear;
+  top: -10px;
+}
+
+.LanguagesSecondSquare {
+  position: relative;
+  top: 8px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(-60deg, #223034, #4b2f44);
+  border-radius: 10px;
+  transition: background-image 0.2s ease-in-out;
+}
+
+.LanguagesFirstSquare:hover .LanguagesSecondSquare {
+  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
+  transition: background-image 0.2s ease-in-out;
+}
+
+.LanguagesThirdSquare {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-dark-color);
+  border-radius: 10px;
+  padding: 1rem;
+  border: 0.3rem solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
-.EmptySpaceProject {
-  width: 100%;
-  height: 175px;
+.LanguagesContent {
+  width: 90%;
+  height: 5rem;
+  display: flex;
 }
 
-.RotateIco p {
-  font-size: 2rem;
-  background-image: linear-gradient(-60deg, #ffffff, #ffffff);
-  background-size: 100%;
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  width: 100%;
-  height: 175px;
+.LanguagesTitle {
+  height: 100%;
+  width: 30%;
+  color: white;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding: 4rem;
-  user-select: none;
+  align-items: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.LanguagesRate {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 70%;
+
+}
+
+.LanguagesRateTile,
+.LanguagesRateBar {
+  width: 100%;
+  height: 50%;
+
+}
+
+.LanguagesRateTile {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.LanguagesRateBar {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.BarOuter {
+  width: 100%;
+  height: 1.2rem;
+  border: 0.2rem solid white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.BarInnerPL,
+.BarInnerENG,
+.BarInnerPJM {
+  background-image: linear-gradient(-60deg, #223034, #4b2f44);
+  border-radius: 5px;
+  height: 99%;
+}
+
+.LanguagesFirstSquare:hover .BarInnerPL,
+.LanguagesFirstSquare:hover .BarInnerENG,
+.LanguagesFirstSquare:hover .BarInnerPJM {
+  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
+
+}
+
+.BarInnerPL {
+  width: 100%;
+}
+
+.BarInnerENG {
+  width: 75%;
+}
+
+.BarInnerPJM {
+  width: 30%;
+}
+
+
+
+
+.EducationFirstSquare {
+  width: 300px;
+  height: 200px;
+  background-color: transparent;
+  border: 0.3rem solid black;
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.1s linear;
+  top: 0;
+}
+
+.EducationFirstSquare:hover {
+  transition: all 0.2s linear;
+  top: -10px;
+}
+
+.EducationSecondSquare {
+  position: relative;
+  top: 8px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(-60deg, #223034, #4b2f44);
+  border-radius: 10px;
+  transition: background-image 0.2s ease-in-out;
+}
+
+.EducationFirstSquare:hover .EducationSecondSquare {
+  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
+  transition: background-image 0.2s ease-in-out;
+}
+
+.EducationThirdSquare {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-dark-color);
+  border-radius: 10px;
+  padding: 1rem;
+  border: 0.3rem solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.EducationContent {
+  color: white;
+  width: 95%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.EducationContainer p,
+.EducationContainer b,
+.EducationContainer u {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
   cursor: default;
 }
 
 
-.SliderContainer {
-  width: 450px;
-  height: 450px;
-  margin: auto;
-}
-
-.SliderContainer:hover~.RotateIco p {
-  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
-
-}
-
-.CubeContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 450px;
-  height: 450px;
-  border: 0.5rem solid black;
-  border-radius: 10px;
-  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
-
-}
-
-
-
-.CubeContent {
-  background-color: black;
-  color: white;
-  width: 95%;
-  height: 95%;
-  border-radius: 10px;
-  padding: 0.5rem;
+.ProjectsSection {
+  width: 100vw;
+  height: fit-content;
+  background: #1f1e25;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 5rem 2rem 2rem 2rem;
 }
 
-.CubeTop {
-  width: 100%;
-  height: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.CubeTop img {
+.ProjectContainerB,
+.ProjectContainerP {
   width: 100%;
-  height: 100%;
+  height: fit-content;
+  margin-bottom: 5rem;
+  background-color: rgba(19, 16, 21, 255);
   border-radius: 10px;
-}
-
-.CubeMedium {
-  width: 100%;
-  height: 20%;
+  border: 0.2rem solid black;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  flex-direction: column;
+  padding: 2rem;
+  transition: border 0.1s ease-in-out;
+  cursor: pointer;
+
+}
+
+.ProjectContainerB:hover {
+  border: 0.2rem solid #33ccff;
+  transition: border 0.25s ease-in-out;
+}
+
+.ProjectContainerP:hover {
+  border: 0.2rem solid #ff33cc;
+  transition: border 0.25s ease-in-out;
+}
+
+
+
+.ProjectTitle {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
-
-.CubeBottom {
-  width: 100%;
-  height: 20%;
+.LeftType {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-
-.CubeBottom .Border {
-  border: 0.2rem solid white;
-  font-size: 2rem;
-  border-radius: 15px;
-  padding: 0.5rem;
+.RightType {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
 }
+
+
+
+.LeftType img,
+.RightType img {
+  border-radius: 5px;
+  height: 250px;
+  width: fit-content;
+}
+
+.ProjectInfo {
+  width: 40%;
+  height: fit-content;
+}
+
+.ProjectDescription {
+  width: 100%;
+  height: fit-content;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #1f1e25;
+  border: 0.2rem solid black;
+  padding: 2rem;
+  border-radius: 5px;
+  transition: border 0.1s ease-in-out;
+  margin-bottom: 1rem;
+  text-align: center;
+
+}
+
+.ProjectTech {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Tech {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  color: white;
+  background-color: #1f1e25;
+  border: 0.2rem solid black;
+  border-radius: 5px;
+  float: left;
+}
+
+
 
 
 .SectionThreeContainer {
@@ -669,7 +815,7 @@ html::-webkit-scrollbar {
   left: 10px;
   width: 100%;
   height: 100%;
-  background-color: #1f1e1f;
+  background-color: var(--main-dark-color);
   border-radius: 10px;
   padding: 1rem;
   border: 0.3rem solid black;
@@ -677,8 +823,6 @@ html::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
 }
-
-
 
 .SectionThreeContent {
   width: 55%;
@@ -721,45 +865,68 @@ html::-webkit-scrollbar {
 
 /* RESIZE */
 
+@media only screen and (max-width: 1160px) {
 
-@media only screen and (max-width: 1200px) {
+  .MainText {
+    font-size: 6rem;
+  }
+}
 
-  .SkillsContainer {
+
+@media only screen and (max-width: 1050px) {
+
+  #Projects {
+    top: 1950px;
+  }
+
+  #Contact {
+    top: 5000px;
+  }
+
+  .BilbordContainer {
+    height: 5800px;
+  }
+
+  .MainText,
+  .PhotoContainer {
+    margin-bottom: 3rem;
+    height: 50%;
     width: 100%;
   }
 
-}
-
-
-@media only screen and (max-width: 800px) {
-
-  .MainText {
-
-    font-size: 10rem;
+  .PhotoCV {
+    width: 21rem;
+    height: 21rem;
   }
 
-  .SecOneTop {
-    height: 40%;
+  .AboutMeSectionOne {
+    flex-direction: column;
+    height: 400px;
   }
 
-  .SecOneBottom {
-    height: 60%;
+  .AboutMeSectionTwo {
+    flex-direction: column;
+    width: 100%;
+    height: 800px;
+  }
+
+  .SkillsContainer,
+  .LanguagesContainer,
+  .EducationContainer {
+    height: 33%;
+    width: 50%;
+  }
+
+  .LeftType,
+  .RightType {
     flex-direction: column;
   }
 
-  .SecOneBottomLeft {
-    height: 35%;
-    width: 80%;
-    align-items: flex-start;
-
-  }
-
-  .SecOneBottomRight {
-    height: 65%;
-    width: 80%;
-    align-items: flex-start;
+  .ProjectDescription {
+    margin-top: 2rem;
   }
 }
+
 
 @media only screen and (max-width: 800px) {
 
@@ -768,38 +935,74 @@ html::-webkit-scrollbar {
     width: 90%;
   }
 
-
-  .MainText {
-    font-size: 8rem;
+  .ProjectInfo {
+    width: 80%;
+    height: fit-content;
   }
 
 }
 
-@media only screen and (max-width: 535px) {
+@media only screen and (max-width: 640px) {
 
-  .MainText {
-    font-size: 7rem;
+  .LabelSkill,
+  .LanguagesTitle,
+  .LanguagesRateTile,
+  .EducationContent p,
+  .EducationContent u,
+  .EducationContent b {
+    font-size: 1rem;
   }
 }
+
+
+
+@media only screen and (max-width: 580px) {
+
+  .MainText {
+    font-size: 4rem;
+  }
+
+  .LeftType img,
+  .RightType img {
+    display: block;
+    width: 75vw;
+    height: fit-content;
+  }
+
+}
+
 
 @media only screen and (max-width: 480px) {
 
   .MainText {
-    font-size: 6rem;
+    font-size: 3rem;
   }
 
-  .AboutMe div,
-  .AboutMe b {
-    font-size: 1rem;
+
+  .PhotoCV {
+    width: 16rem;
+    height: 16rem;
   }
 
-  .SkillsContainer {
+  .PhotoTitle {
+    font-size: 1.8rem;
+  }
+
+  .ProjectTitle {
+    font-size: 2.5rem;
+  }
+
+  .ProjectDescription,
+  .Tech {
+    font-size: 1.2rem;
+  }
+
+  .SkillsContainer,
+  .LanguagesContainer,
+  .EducationContainer {
     width: 70%;
   }
 
-  .LabelSkill {
-    font-size: 1rem;
-  }
 
   .FullDot,
   .EmptyDot {
@@ -813,34 +1016,7 @@ html::-webkit-scrollbar {
     width: 0.5rem;
   }
 
-  .SliderContainer {
-    width: 90%;
-  }
 
-  .CubeContainer {
-    width: 100%;
-  }
-
-  .CubeTop {
-    height: 50%;
-  }
-
-  .CubeMedium {
-    font-size: 1.5rem;
-    height: 25%;
-  }
-
-  .CubeBottom {
-    height: 25%;
-  }
-
-  .CubeBottom .Border {
-    font-size: 1rem;
-  }
-
-  .RotateIco p {
-    font-size: 1rem;
-  }
 
   .SectionThreeContent {
     width: 70%;
@@ -850,29 +1026,12 @@ html::-webkit-scrollbar {
     width: 20px;
     height: 20px;
   }
-}
 
-@media only screen and (max-width: 400px) {
-  .MainText {
-    font-size: 5rem;
-  }
-
-  .Buttons button {
+  .ContactContainer p {
     font-size: 1.2rem;
   }
-
-  .CubeTop {
-    height: 40%
-  }
-
-  .CubeMedium,
-  .CubeBottom {
-    height: 30%;
-  }
 }
 
-@media only screen and (max-width: 335px) {
-  .MainText {
-    font-size: 4rem;
-  }
-}
+
+
+@media only screen and (max-width: 320px) {}

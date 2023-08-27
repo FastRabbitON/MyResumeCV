@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 
-// import function to register Swiper custom elements
-import { register } from 'swiper/element/bundle';
-// register Swiper custom elements
-register();
+
+// import { register } from 'swiper/element/bundle';
+// register();
 
 
 function App() {
@@ -23,7 +22,7 @@ function App() {
   }
 
   const Board = () => {
-    window.open("https://github.com/FastRabbitON/MyBoard", '_blank').focus();
+    window.open("https://mynoteboard.pl", '_blank').focus();
   }
 
   const Translator = () => {
@@ -66,7 +65,11 @@ function App() {
 
       const percentage = (scrollTop / (documentHeight - windowHeight)) * 100;
       setScrollPercentage(percentage);
+
+      console.log(window.scrollY)
     };
+
+
 
     window.addEventListener('scroll', handleScroll);
 
@@ -91,7 +94,7 @@ function App() {
 
       <div className="NavBarContainer"
         style={{
-          backgroundColor: `${scrollPercentage > 1 ? "black" : "rgba(0, 0, 0, 0)"}`
+          backgroundColor: `${scrollPercentage > 1 ? "rgba(19, 16, 21)" : "rgba(0, 0, 0, 0)"}`
 
         }}>
 
@@ -118,175 +121,215 @@ function App() {
       <div className="BilbordContainer"></div>
 
 
-      <div className="SectionOneContainer">
+      <div className="AboutMeContainer">
 
-        <div className="EmptySpaceMe"></div>
+        <div className="AboutMeEmpty"></div>
 
-        <div className="ContentSpace">
-          <div className="SecOneTop">
+        <div className="AboutMeContent">
 
+          <div className="AboutMeSectionOne">
             <div className='MainText' onClick={() => github()}>
               FastRabbit ON
+            </div>
+
+            <div className="PhotoContainer">
+              <img className="PhotoCV" src={require("./Asety/ZdjęcieCV.png")} />
+              <div className="PhotoTitle">Kacper Kwiek</div>
             </div>
           </div>
 
 
-          <div className="SecOneBottom">
+          <div className="AboutMeSectionTwo">
 
-            <div className="SecOneBottomLeft">
+            <div className="SkillsContainer">
 
-              <div className="AboutMeFirstSquare">
+              <div className="SkillsFirstSquare">
+                <div className="SkillsSecondSquare">
+                  <div className="SkillsThirdSquare">
+                    <div className="SkillsRateContainer">
 
-                <div className="AboutMeSecondSquare">
+                      <div className="AboutSkill">
+                        <div className="LabelSkill">HTML</div>
+                        <div className="RateSkill">
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                        </div>
+                      </div>
 
-                  <div className="AboutMeThirdSquare">
+                      <div className="AboutSkill">
+                        <div className="LabelSkill">CSS</div>
+                        <div className="RateSkill">
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="HalfDotL"></div>
+                          <div className="HalfDotR"></div>
+                        </div>
+                      </div>
 
-                    <div className="AboutMeContainer">
-                      <div className='AboutMe'> <b>AGE: </b><div>24</div></div>
-                      <div className='AboutMe'> <b>NATIONALITY: </b><div> Poland</div></div>
-                      <div className='AboutMe'> <b>LANGUAGES: </b> <div>Polish, English, PJM</div></div>
-                      <div className='AboutMe'> <b>EDUCATION: </b><div> Bachelor of Acoustics: Noise Protection and Hearing Care; Master of Acoustics (in progress)</div> </div>
+                      <div className="AboutSkill">
+                        <div className="LabelSkill">JavaScript</div>
+                        <div className="RateSkill">
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="EmptyDot"></div>
+                        </div>
+                      </div>
+
+                      <div className="AboutSkill">
+                        <div className="LabelSkill">React</div>
+                        <div className="RateSkill">
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="HalfDotL"></div>
+                          <div className="HalfDotR"></div>
+                          <div className="EmptyDot"></div>
+                        </div>
+                      </div>
+
+                      <div className="AboutSkill">
+                        <div className="LabelSkill">Python</div>
+                        <div className="RateSkill">
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="HalfDotL"></div>
+                          <div className="HalfDotR"></div>
+                          <div className="EmptyDot"></div>
+                          <div className="EmptyDot"></div>
+                        </div>
+                      </div>
+
+                      <div className="AboutSkill">
+                        <div className="LabelSkill">MATLAB</div>
+                        <div className="RateSkill">
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="HalfDotL"></div>
+                          <div className="HalfDotR"></div>
+                          <div className="EmptyDot"></div>
+                        </div>
+                      </div>
+
+                      <div className="AboutSkill">
+                        <div className="LabelSkill">AutoCAD</div>
+                        <div className="RateSkill">
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                        </div>
+                      </div>
+
+                      <div className="AboutSkill">
+                        <div className="LabelSkill">SoundPLAN</div>
+                        <div className="RateSkill">
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="HalfDotL"></div>
+                          <div className="HalfDotR"></div>
+                        </div>
+                      </div>
+
+                      <div className="AboutSkill">
+                        <div className="LabelSkill">JASP</div>
+                        <div className="RateSkill">
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="FullDot"></div>
+                          <div className="HalfDotL"></div>
+                          <div className="HalfDotR"></div>
+                          <div className="EmptyDot"></div>
+                        </div>
+                      </div>
                     </div>
-
                   </div>
-
                 </div>
-
               </div>
-
 
             </div>
 
-            <div className="SecOneBottomRight">
 
-              <div className="SecOneBottomRight">
+            <div className="LanguagesContainer">
 
-                <div className="SkillsFirstSquare">
+              <div className="LanguagesFirstSquare">
+                <div className="LanguagesSecondSquare">
+                  <div className="LanguagesThirdSquare">
 
-                  <div className="SkillsSecondSquare">
-
-                    <div className="SkillsThirdSquare">
-
-                      <div className="SkillsContainer">
-
-                        <div className="AboutSkill">
-                          <div className="LabelSkill">HTML</div>
-                          <div className="RateSkill">
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
+                    <div className="LanguagesContent">
+                      <div className="LanguagesTitle">Polish</div>
+                      <div className="LanguagesRate">
+                        <div className="LanguagesRateTile">c2</div>
+                        <div className="LanguagesRateBar">
+                          <div className="BarOuter">
+                            <div className="BarInnerPL"></div>
                           </div>
                         </div>
-
-                        <div className="AboutSkill">
-                          <div className="LabelSkill">CSS</div>
-                          <div className="RateSkill">
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="HalfDotL"></div>
-                            <div className="HalfDotR"></div>
-                          </div>
-                        </div>
-
-                        <div className="AboutSkill">
-                          <div className="LabelSkill">JavaScript</div>
-                          <div className="RateSkill">
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="EmptyDot"></div>
-                          </div>
-                        </div>
-
-                        <div className="AboutSkill">
-                          <div className="LabelSkill">React</div>
-                          <div className="RateSkill">
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="HalfDotL"></div>
-                            <div className="HalfDotR"></div>
-                            <div className="EmptyDot"></div>
-                          </div>
-                        </div>
-
-                        <div className="AboutSkill">
-                          <div className="LabelSkill">Python</div>
-                          <div className="RateSkill">
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="HalfDotL"></div>
-                            <div className="HalfDotR"></div>
-                            <div className="EmptyDot"></div>
-                            <div className="EmptyDot"></div>
-                          </div>
-                        </div>
-
-                        <div className="AboutSkill">
-                          <div className="LabelSkill">MATLAB</div>
-                          <div className="RateSkill">
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="HalfDotL"></div>
-                            <div className="HalfDotR"></div>
-                            <div className="EmptyDot"></div>
-                          </div>
-                        </div>
-
-                        <div className="AboutSkill">
-                          <div className="LabelSkill">AutoCAD</div>
-                          <div className="RateSkill">
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                          </div>
-                        </div>
-
-                        <div className="AboutSkill">
-                          <div className="LabelSkill">SoundPLAN</div>
-                          <div className="RateSkill">
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="HalfDotL"></div>
-                            <div className="HalfDotR"></div>
-                          </div>
-                        </div>
-
-                        <div className="AboutSkill">
-                          <div className="LabelSkill">JASP</div>
-                          <div className="RateSkill">
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="FullDot"></div>
-                            <div className="HalfDotL"></div>
-                            <div className="HalfDotR"></div>
-                            <div className="EmptyDot"></div>
-                          </div>
-                        </div>
-
                       </div>
+                    </div>
 
+                    <div className="LanguagesContent">
+                      <div className="LanguagesTitle">English</div>
+                      <div className="LanguagesRate">
+                        <div className="LanguagesRateTile">b1/b2</div>
+                        <div className="LanguagesRateBar">
+                          <div className="BarOuter">
+                            <div className="BarInnerENG"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="LanguagesContent">
+                      <div className="LanguagesTitle">PJM</div>
+                      <div className="LanguagesRate">
+                        <div className="LanguagesRateTile">a1</div>
+                        <div className="LanguagesRateBar">
+                          <div className="BarOuter">
+                            <div className="BarInnerPJM"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                   </div>
-
                 </div>
-
-
               </div>
 
+            </div>
 
+            <div className="EducationContainer">
 
+              <div className="EducationFirstSquare">
+                <div className="EducationSecondSquare">
+                  <div className="EducationThirdSquare">
+
+                    <div className="EducationContent">
+                      <p><b>(2019 - 2022)</b></p>
+                      <p>Faculty of Physics, UAM in Poznań</p>
+                      <p> <b>Degree I:</b> Acoustics, specialization in hearing care and noise protection</p>
+                      <p> <u>Acoustic, Hearing Care</u></p>
+                    </div>
+
+                    <div className="EducationContent">
+                      <p><b>(2022 - now)</b></p>
+                      <p>Faculty of Physics, UAM in Poznań</p>
+                      <p><b>Degree II:</b> Acoustic</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
@@ -301,122 +344,111 @@ function App() {
 
 
 
-      <div className="SectionTwoContainer">
+      <div className="ProjectsSection">
 
-        <div className="EmptySpaceProject"></div>
-
-        <div className="SliderContainer">
-          <swiper-container
-            speed="200"
-            loop="true"
-            grab-cursor="true"
-            effect="cube"
-            auto-play="200"
-          >
-
-            <swiper-slide onClick={() => Board()}>
-              <div className="CubeContainer">
-                <div className="CubeContent">
-                  <div className="CubeTop"><img src={require("./Asety/GifBoard.gif")} alt='KraftGif' /></div>
-                  <div className="CubeMedium">Fully customizable notes dashboard</div>
-                  <div className="CubeBottom">
-                    <div className="Border">HTML</div>
-                    <div className="Border">CSS</div>
-                    <div className="Border">JS</div>
-                    <div className="Border">React</div>
-                    <div className="Border">Application</div>
-                  </div>
-                </div>
+        <div className="ProjectContainerB" onClick={Board}>
+          <div className="ProjectTitle">myNoteBoard</div>
+          <div className="LeftType">
+            <img src={require("./Asety/GifBoard.gif")} alt="" />
+            <div className="ProjectInfo">
+              <div className="ProjectDescription">
+                myBoard is a fully customizable and interactive board for storing notes and widgets.
+                The project is created to enjoy your own and unique organizer.
               </div>
-            </swiper-slide>
-
-            <swiper-slide onClick={() => Kraft()}>
-              <div className="CubeContainer">
-                <div className="CubeContent">
-                  <div className="CubeTop"><img src={require("./Asety/GifKraft.gif")} alt='KraftGif' /></div>
-                  <div className="CubeMedium">Website for carpentry company</div>
-                  <div className="CubeBottom">
-                    <div className="Border">HTML</div>
-                    <div className="Border">CSS</div>
-                    <div className="Border">JS</div>
-                    <div className="Border">React</div>
-                    <div className="Border">Website</div>
-                  </div>
-                </div>
+              <div className="ProjectTech">
+                <div className="Tech">HTML</div>
+                <div className="Tech">CSS</div>
+                <div className="Tech">JS</div>
+                <div className="Tech">React</div>
+                <div className="Tech">React Tooltip</div>
+                <div className="Tech">React Color</div>
+                <div className="Tech">Grab and move</div>
               </div>
-            </swiper-slide>
-
-            <swiper-slide onClick={() => Visual()}>
-              <div className="CubeContainer">
-                <div className="CubeContent">
-                  <div className="CubeTop"><img src={require("./Asety/GifVisual.gif")} alt='VisualGif' /></div>
-                  <div className="CubeMedium">Software to conduct visual perception tests</div>
-                  <div className="CubeBottom">
-                    <div className="Border">HTML</div>
-                    <div className="Border">CSS</div>
-                    <div className="Border">JS</div>
-                    <div className="Border">Application</div>
-                  </div>
-                </div>
-              </div>
-            </swiper-slide>
-
-            <swiper-slide onClick={() => Weather()}>
-              <div className="CubeContainer">
-                <div className="CubeContent">
-                  <div className="CubeTop"><img src={require("./Asety/GifWeather.gif")} alt='WeatherGif' /></div>
-                  <div className="CubeMedium">Application to check actual weather</div>
-                  <div className="CubeBottom">
-                    <div className="Border">HTML</div>
-                    <div className="Border">CSS</div>
-                    <div className="Border">JS</div>
-                    <div className="Border">React</div>
-                    <div className="Border">Application</div>
-                  </div>
-                </div>
-              </div>
-            </swiper-slide>
-
-            <swiper-slide onClick={() => Pace()}>
-              <div className="CubeContainer">
-                <div className="CubeContent">
-                  <div className="CubeTop"><img src={require("./Asety/GifPace.gif")} alt='TranslatorGif' /></div>
-                  <div className="CubeMedium">Software to conduct pace test detection</div>
-                  <div className="CubeBottom">
-                    <div className="Border">HTML</div>
-                    <div className="Border">CSS</div>
-                    <div className="Border">JS</div>
-                    <div className="Border">Application</div>
-                  </div>
-                </div>
-              </div>
-            </swiper-slide>
-
-            <swiper-slide onClick={() => Translator()}>
-              <div className="CubeContainer">
-                <div className="CubeContent">
-                  <div className="CubeTop"><img src={require("./Asety/GifTranslator.gif")} alt='TranslatorGif' /></div>
-                  <div className="CubeMedium">Translator from Polish to PJM</div>
-                  <div className="CubeBottom">
-                    <div className="Border">HTML</div>
-                    <div className="Border">CSS</div>
-                    <div className="Border">JS</div>
-                    <div className="Border">React</div>
-                    <div className="Border">Application</div>
-                  </div>
-                </div>
-              </div>
-            </swiper-slide>
-
-
-
-          </swiper-container>
-
-
-
+            </div>
+          </div>
         </div>
 
-        <div className="RotateIco"><p>⤾ Rotate ⤿</p></div>
+        <div className="ProjectContainerP" onClick={Kraft}>
+          <div className="ProjectTitle">Website for carpentry company</div>
+          <div className="RightType">
+            <img src={require("./Asety/GifKraft.gif")} alt="" />
+            <div className="ProjectInfo">
+              <div className="ProjectDescription">
+                A website created for a company that creates custom-made furniture.
+                Constant maintenance of the website and constant updating of the content.
+              </div>
+              <div className="ProjectTech">
+                <div className="Tech">HTML</div>
+                <div className="Tech">CSS</div>
+                <div className="Tech">JS</div>
+                <div className="Tech">React</div>
+                <div className="Tech">Leaflet API</div>
+                <div className="Tech">Gallery</div>
+                <div className="Tech">Responsive</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="ProjectContainerB" onClick={Translator}>
+          <div className="ProjectTitle">Translator PJM</div>
+          <div className="LeftType">
+            <img src={require("./Asety/GifTranslator.gif")} alt="" />
+            <div className="ProjectInfo">
+              <div className="ProjectDescription">
+                A dactylographic sign language translator that allows you to learn and translate individual
+                letters from Polish into Polish Sign Language and vice versa.
+              </div>
+              <div className="ProjectTech">
+                <div className="Tech">HTML</div>
+                <div className="Tech">CSS</div>
+                <div className="Tech">JS</div>
+                <div className="Tech">Vanilla</div>
+                <div className="Tech">Responsive</div>
+                <div className="Tech">Dark Mode</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="ProjectContainerP" onClick={Weather}>
+          <div className="ProjectTitle">Weather App</div>
+          <div className="RightType">
+            <img src={require("./Asety/GifWeather.gif")} alt="" />
+            <div className="ProjectInfo">
+              <div className="ProjectDescription">
+                A simple weather application that retrieves information from an external OpenWeather api.
+              </div>
+              <div className="ProjectTech">
+                <div className="Tech">HTML</div>
+                <div className="Tech">CSS</div>
+                <div className="Tech">JS</div>
+                <div className="Tech">React</div>
+                <div className="Tech">Open weather API</div>
+                <div className="Tech">fetch</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="ProjectContainerB" onClick={Visual}>
+          <div className="ProjectTitle">Psychophysical Experiments</div>
+          <div className="LeftType">
+            <img src={require("./Asety/GifVisual.gif")} alt="" />
+            <div className="ProjectInfo">
+              <div className="ProjectDescription">
+                A program that allows you to conduct various psychophysical experiments related to visual perception.
+              </div>
+              <div className="ProjectTech">
+                <div className="Tech">HTML</div>
+                <div className="Tech">CSS</div>
+                <div className="Tech">JS</div>
+                <div className="Tech">Data export</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
 

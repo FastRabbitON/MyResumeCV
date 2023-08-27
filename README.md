@@ -2,27 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<<<<<<< HEAD
 ## Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
-=======
-## General Information
-Resume website that show my projects, skills and general information about my.
-
-## Technologies Used
-- HTML
-- CSS
-- JavaScript
-- React
-
-## Change Log
-- 20-11-2022: First version; 
-- 11-12-2022: Resize optimization;
-- 0-.06-2023: Redesigning the page and rewriting it to React
->>>>>>> 16c5fe4040a2fe7e7881d5b7d338017c6f364559
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
