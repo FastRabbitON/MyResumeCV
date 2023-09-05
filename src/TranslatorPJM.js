@@ -69,7 +69,7 @@ const TranslatorPJM = () => {
       }}
     >
 
-      <nav
+      <nav className="navTranslator"
         style={{
           backgroundColor: `${isDarkMode ? "#393938" : "white"}`,
           color: `${isDarkMode ? "white" : "black"}`,

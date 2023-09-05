@@ -1,76 +1,55 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './Resume_Style.css';
 import { Link } from "react-router-dom";
+import { useInView } from 'react-intersection-observer';
 
 
 function Resume() {
 
   document.title = "FastRabbitON"
 
-
   const github = () => {
     window.open("https://github.com/FastRabbitON", '_blank').focus();
   }
-
   const mail = () => {
     window.location = "mailto:fastrabbiton@gmail.com";
   }
 
-  const Kraft = () => {
-    window.open("https://meblekraft.com.pl", '_blank').focus();
-  }
 
-  const Board = () => {
-    window.open("https://mynoteboard.pl", '_blank').focus();
-  }
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [scrollTop, setScrollTop] = useState(0);
 
-  const Translator = () => {
-    window.open("https://github.com/FastRabbitON/TranslatorPJM", '_blank').focus();
-  }
-
-  const Visual = () => {
-    window.open("https://github.com/FastRabbitON/VisualResolutionTest", '_blank').focus();
-  }
-
-  const Weather = () => {
-    window.open("  https://github.com/FastRabbitON/WeatherApp", '_blank').focus();
-  }
+  const handleMouseMove = (e) => {
+    setMousePos({ x: e.clientX, y: e.clientY });
+  };
 
 
-  const Pace = () => {
-    window.open("  https://github.com/FastRabbitON/PaceDetectionTest", '_blank').focus();
-  }
-
-
-  const AnchorAbout = () => {
-    window.location = `#AboutMe`
-  }
-
-  const AnchorProjects = () => {
-    window.location = `#Projects`
-  }
-
-  const AnchorContact = () => {
-    window.location = `#Contact`
-  }
-
-  const [scrollPercentage, setScrollPercentage] = useState(0);
+  const handleTouchMove = (event) => {
+    const touch = event.touches[0];
+    if (touch) {
+      setMousePos({ x: touch.clientX, y: touch.clientY });
+    }
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('touchmove', handleTouchMove, { passive: false });
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('touchmove', handleTouchMove);
+    };
+  }, []);
 
-      const percentage = (scrollTop / (documentHeight - windowHeight)) * 100;
-      setScrollPercentage(percentage);
 
-      console.log(window.scrollY)
+
+
+  useEffect(() => {
+    const handleScroll = event => {
+      setScrollTop(window.scrollY);
     };
 
-
-
     window.addEventListener('scroll', handleScroll);
+
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -78,275 +57,281 @@ function Resume() {
   }, []);
 
 
+  const skillsData = [
+    { name: 'HTML', rating: 5 },
+    { name: 'CSS', rating: 5 },
+    { name: 'JavaScript', rating: 4 },
+    { name: 'React', rating: 4 },
+    { name: 'Python', rating: 2 },
+    { name: 'MATLAB', rating: 3 },
+    { name: 'AutoCAD', rating: 5 },
+    { name: 'SoundPLAN', rating: 4 },
+    { name: 'JASP', rating: 3 },
+  ];
+
+  const languageData = [
+    { name: "Polish", rating: "C2", ratingBar: 100 },
+    { name: "English", rating: "B1/B2", ratingBar: 75 },
+    { name: "PJM", rating: "A1", ratingBar: 30 },
+  ]
+
+  const { ref: myRefOne, inView: isVisibleOne } = useInView({
+    threshold: 0,
+  });
+
+  const { ref: myRefTwo, inView: isVisibleTwo } = useInView({
+    threshold: 0,
+  });
+
+  const { ref: myRefThree, inView: isVisibleThree } = useInView({
+    threshold: 0,
+  });
+
+  const { ref: myRefFour, inView: isVisibleFour } = useInView({
+    threshold: 0,
+  });
+
+  const { ref: myRefFive, inView: isVisibleFive } = useInView({
+    threshold: 0,
+  });
+
+  const { ref: myRefSix, inView: isVisibleSix } = useInView({
+    threshold: 0,
+  });
+
+  const { ref: myRefSeven, inView: isVisibleSeven } = useInView({
+    threshold: 0,
+  });
+
+  const { ref: myRefGhost, inView: isVisibleGhost } = useInView({
+    threshold: 0.2,
+  });
 
 
+  const AnchorAboutMe = useRef();
+  const AnchorPorftolio = useRef();
+  const AnchorContact = useRef();
+
+  const ScrollToAboutME = () => {
+    window.scrollTo({ top: AnchorAboutMe.current.getBoundingClientRect().top })
+  }
+
+  const ScrollToPortfolio = () => {
+    window.scrollTo({ top: AnchorPorftolio.current.getBoundingClientRect().top })
+
+  }
+
+  const ScrollToContact = () => {
+    window.scrollTo({ top: AnchorContact.current.getBoundingClientRect().top })
+  }
+
+  const ScrollToTop = () => {
+    window.scrollTo({ top: 0 })
+  }
 
 
   return (
 
     <div className="AppContainer">
 
-      <div id="AboutMe"></div>
-      <div id="Projects"></div>
-      {/* <div id="Contact"></div> */}
-
-
-      <div className="NavBarContainer"
+      <div onClick={ScrollToTop} className="ArrowToTop"
         style={{
-          backgroundColor: `${scrollPercentage > 1 ? "rgba(19, 16, 21)" : "rgba(0, 0, 0, 0)"}`
-
-        }}>
-
-
-        <div className="LoadingBarContainer">
-          <div className="LoadingBar"
-            style={{ width: `${Math.max(scrollPercentage, 5)}%`, height: "7px" }}>
-
-          </div>
-        </div>
-
-
-
-        <div className="Buttons">
-          <button id="nav-button-about" onClick={() => AnchorAbout()}>About Me</button>
-          <button id="nav-button-projects" onClick={() => AnchorProjects()}>Projects</button>
-          <button id="nav-button-contact" onClick={() => AnchorContact()}>Contact</button>
-        </div>
-
-
-
+          display: scrollTop >= 1000 ? "flex" : "none"
+        }}
+      >
+        ↑
       </div>
 
-      <div className="ResumeBilbordContainer"></div>
+      <nav className='ResumeNav'>
+        <div className="BtnContainer">
+          <button onClick={ScrollToAboutME}>About ME</button>
+          <button onClick={ScrollToPortfolio}> Portfolio </button>
+          <button onClick={ScrollToContact}>Contact</button>
+        </div>
+      </nav>
+
+      <div className="ParallaxContainer">
+        <img
+          className="ParallaxImage"
+          src={require("./Parallax/FullX.png")}
+          style={{
+            left: "0px",
+            bottom: "0px",
+            zIndex: 1
+          }}
+          alt="Background"
+        />
+        <img
+          className="ParallaxImage"
+          src={require("./Parallax/Layer5_Trees.png")}
+          style={{
+            left: "0px",
+            bottom: "0px",
+            zIndex: 6
+          }}
+          loading='lazy'
+          alt="Trees"
+        />
+        <img
+          className="ParallaxImage "
+          id="Mountains"
+          src={require("./Parallax/Layer4_Mountain12.png")}
+          style={{
+            transform: `translate(${mousePos.x / 65}px, ${mousePos.y / 75}px)`,
+            zIndex: 5
+          }}
+          loading='lazy'
+          alt="Mountains"
+        />
+        <img
+          className="ParallaxImage"
+          src={require("./Parallax/Layer3_Cloud.png")}
+          style={{
+            transform: `translate(${-mousePos.y / 85}px, ${-mousePos.x / 80}px)`,
+            right: "-20px",
+            bottom: "0px",
+            zIndex: 3
+          }}
+          loading='lazy'
+          alt="Cloud"
+        />
+        <img
+          className="ParallaxImage"
+          id='Balloons'
+          src={require("./Parallax/Layer4_Balloon12.png")}
+          style={{
+            transform: `translate(${-mousePos.x / 35}px, ${-mousePos.y / 25}px)`,
+            zIndex: 4
+          }}
+          loading='lazy'
+          alt="Balloons"
+        />
+        <h2 className='ParallaxText'
+          style={{
+            transform: `translate(${scrollTop < 500 ? (scrollTop * 0.8) : 500}px  , 0px)`
+          }}
+        >
+          <p> make </p>   <p>your dreams</p>   <p>come true</p>
+        </h2>
+      </div>
 
 
       <div className="AboutMeContainer">
-
-        <div className="AboutMeEmpty"></div>
+        <img
+          className="SkeletonOneImage"
+          src={require("./Parallax/SkeletonOne.png")}
+          style={{
+            transform: `translate(${mousePos.x / 150}px, ${-mousePos.y / 90}px)`
+          }}
+          alt="Skeleton"
+        />
+        <img
+          className="SkeletonTwoImage"
+          src={require("./Parallax/SkeletonTwo.png")}
+          style={{
+            transform: `translate(${-mousePos.x / 90}px, ${mousePos.y / 140}px)`
+          }}
+          alt="Skeleton"
+        />
 
         <div className="AboutMeContent">
 
           <div className="AboutMeSectionOne">
-            <div className='MainText' onClick={() => github()}>
-              FastRabbit ON
-            </div>
-
             <div className="PhotoContainer">
-              <img className="PhotoCV" src={require("./AsetyResume/PhotoCV.png")} />
+              <img ref={AnchorAboutMe} className="PhotoCV" src={require("./AsetyResume/PhotoCV.png")} />
               <div className="PhotoTitle">Kacper Kwiek</div>
             </div>
           </div>
 
-
           <div className="AboutMeSectionTwo">
-
             <div className="SkillsContainer">
-
               <div className="SkillsFirstSquare">
                 <div className="SkillsSecondSquare">
-                  <div className="SkillsThirdSquare">
-                    <div className="SkillsRateContainer">
-
-                      <div className="AboutSkill">
-                        <div className="LabelSkill">HTML</div>
+                  <div className="SkillsRateContainer">
+                    {skillsData.map((skill, index) => (
+                      <div className="AboutSkill" key={index}>
+                        <div className="LabelSkill">{skill.name}</div>
                         <div className="RateSkill">
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
+                          {Array.from({ length: 5 }, (_, i) => (
+                            <div
+                              className={`${i < Math.floor(skill.rating) ? 'FullDot' : 'EmptyDot'
+                                }`}
+                              key={i}
+                            ></div>
+                          ))}
                         </div>
                       </div>
-
-                      <div className="AboutSkill">
-                        <div className="LabelSkill">CSS</div>
-                        <div className="RateSkill">
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="HalfDotL"></div>
-                          <div className="HalfDotR"></div>
-                        </div>
-                      </div>
-
-                      <div className="AboutSkill">
-                        <div className="LabelSkill">JavaScript</div>
-                        <div className="RateSkill">
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="EmptyDot"></div>
-                        </div>
-                      </div>
-
-                      <div className="AboutSkill">
-                        <div className="LabelSkill">React</div>
-                        <div className="RateSkill">
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="HalfDotL"></div>
-                          <div className="HalfDotR"></div>
-                          <div className="EmptyDot"></div>
-                        </div>
-                      </div>
-
-                      <div className="AboutSkill">
-                        <div className="LabelSkill">Python</div>
-                        <div className="RateSkill">
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="HalfDotL"></div>
-                          <div className="HalfDotR"></div>
-                          <div className="EmptyDot"></div>
-                          <div className="EmptyDot"></div>
-                        </div>
-                      </div>
-
-                      <div className="AboutSkill">
-                        <div className="LabelSkill">MATLAB</div>
-                        <div className="RateSkill">
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="HalfDotL"></div>
-                          <div className="HalfDotR"></div>
-                          <div className="EmptyDot"></div>
-                        </div>
-                      </div>
-
-                      <div className="AboutSkill">
-                        <div className="LabelSkill">AutoCAD</div>
-                        <div className="RateSkill">
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                        </div>
-                      </div>
-
-                      <div className="AboutSkill">
-                        <div className="LabelSkill">SoundPLAN</div>
-                        <div className="RateSkill">
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="HalfDotL"></div>
-                          <div className="HalfDotR"></div>
-                        </div>
-                      </div>
-
-                      <div className="AboutSkill">
-                        <div className="LabelSkill">JASP</div>
-                        <div className="RateSkill">
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="FullDot"></div>
-                          <div className="HalfDotL"></div>
-                          <div className="HalfDotR"></div>
-                          <div className="EmptyDot"></div>
-                        </div>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
-
             </div>
 
 
             <div className="LanguagesContainer">
-
               <div className="LanguagesFirstSquare">
                 <div className="LanguagesSecondSquare">
-                  <div className="LanguagesThirdSquare">
-
-                    <div className="LanguagesContent">
-                      <div className="LanguagesTitle">Polish</div>
+                  {languageData.map((language, index) => (
+                    <div className="LanguagesContent" key={index}>
+                      <div className="LanguagesTitle">{language.name}</div>
                       <div className="LanguagesRate">
-                        <div className="LanguagesRateTile">c2</div>
+                        <div className="LanguagesRateTile">{language.rating}</div>
                         <div className="LanguagesRateBar">
                           <div className="BarOuter">
-                            <div className="BarInnerPL"></div>
+                            <div className="BarInner"
+                              style={{
+                                width: `${language.ratingBar}px`
+                              }}></div>
                           </div>
                         </div>
                       </div>
                     </div>
-
-                    <div className="LanguagesContent">
-                      <div className="LanguagesTitle">English</div>
-                      <div className="LanguagesRate">
-                        <div className="LanguagesRateTile">b1/b2</div>
-                        <div className="LanguagesRateBar">
-                          <div className="BarOuter">
-                            <div className="BarInnerENG"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="LanguagesContent">
-                      <div className="LanguagesTitle">PJM</div>
-                      <div className="LanguagesRate">
-                        <div className="LanguagesRateTile">a1</div>
-                        <div className="LanguagesRateBar">
-                          <div className="BarOuter">
-                            <div className="BarInnerPJM"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
+                  ))}
                 </div>
               </div>
-
             </div>
 
             <div className="EducationContainer">
-
               <div className="EducationFirstSquare">
                 <div className="EducationSecondSquare">
-                  <div className="EducationThirdSquare">
-
-                    <div className="EducationContent">
-                      <p><b>(2019 - 2022)</b></p>
-                      <p>Faculty of Physics, UAM in Poznań</p>
-                      <p> <b>Degree I:</b> Acoustics, specialization in hearing care and noise protection</p>
-                      <p> <u>Acoustic, Hearing Care</u></p>
-                    </div>
-
-                    <div className="EducationContent">
-                      <p><b>(2022 - now)</b></p>
-                      <p>Faculty of Physics, UAM in Poznań</p>
-                      <p><b>Degree II:</b> Acoustic</p>
-                    </div>
-
+                  <div className="EducationContent">
+                    <p><b>(2019 - 2022)</b></p>
+                    <p>Faculty of Physics, UAM in Poznań</p>
+                    <p> <b>Degree I:</b> Acoustics, specialization in hearing care and noise protection</p>
+                    <p> <u>Acoustic, Hearing Care</u></p>
+                  </div>
+                  <div className="EducationContent">
+                    <p><b>(2022 - now)</b></p>
+                    <p>Faculty of Physics, UAM in Poznań</p>
+                    <p><b>Degree II:</b> Acoustic</p>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
-
-
-
-
-
       </div>
 
 
 
-      <div className="ProjectsSection">
+      <div ref={myRefGhost} className="ProjectsSection">
 
-        <Link className="Link" to="https://mynoteboard.pl/" target="_blank">
-          <div className="ProjectContainerB">
+        <div ref={AnchorPorftolio} className='AnchorP'></div>
+
+        <img
+          className={isVisibleGhost ? "GhostImage-on" : "GhostImage"}
+          src={require("./Parallax/GhostOne.png")}
+          style={{
+            right: "-90px",
+            top: "350px",
+            zIndex: 1
+          }}
+          alt="Ghost"
+        />
+
+
+        <div ref={myRefOne} className={isVisibleOne ? "ProjectContainerB-on" : "ProjectContainerB"}>
+          <Link className="LinkPortfolio" to="https://mynoteboard.pl/" target="_blank">
             <img className="ProjectIco" src={require("./AsetyResume/IcoWeb.png")} alt='IcoWeb' />
             <div className="ClickMan">Click and check it out!</div>
             <div className="ProjectTitle">myNoteBoard</div>
@@ -368,13 +353,13 @@ function Resume() {
                 </div>
               </div>
             </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
 
         <div className="ProjectEmptySpace"></div>
 
-        <Link className="Link" to="https://meblekraft.com.pl/" target="_blank">
-          <div className="ProjectContainerP">
+        <div ref={myRefTwo} className={isVisibleTwo ? "ProjectContainerP-on" : "ProjectContainerP"}>
+          <Link className="LinkPortfolio" to="https://meblekraft.com.pl/" target="_blank">
             <img className="ProjectIco" src={require("./AsetyResume/IcoWeb.png")} alt='IcoWeb' />
             <div className="ClickMan">Click and check it out!</div>
             <div className="ProjectTitle">Website for carpentry company</div>
@@ -396,13 +381,14 @@ function Resume() {
                 </div>
               </div>
             </div>
-          </div>
-        </Link>
+          </Link>
+
+        </div>
 
         <div className="ProjectEmptySpace"></div>
 
-        <Link className="Link" to="/translator" >
-          <div className="ProjectContainerB">
+        <div ref={myRefThree} className={isVisibleThree ? "ProjectContainerB-on" : "ProjectContainerB"}>
+          <Link className="LinkPortfolio" to="translator" >
             <div className="ProjectTitle">Translator PJM</div>
             <img className="ProjectIco" src={require("./AsetyResume/IcoWeb.png")} alt='IcoWeb' />
             <div className="ClickMan">Click and check it out!</div>
@@ -423,13 +409,14 @@ function Resume() {
                 </div>
               </div>
             </div>
-          </div>
-        </Link>
+          </Link>
+
+        </div>
 
         <div className="ProjectEmptySpace"></div>
 
-        <Link className="Link" to="/legalfly" >
-          <div className="ProjectContainerP">
+        <div ref={myRefFour} className={isVisibleFour ? "ProjectContainerP-on" : "ProjectContainerP"}>
+          <Link className="LinkPortfolio" to="legalfly" >
             <div className="ProjectTitle">LegalFLY</div>
             <img className="ProjectIco" src={require("./AsetyResume/IcoWeb.png")} alt='IcoWeb' />
             <div className="ClickMan">Click and check it out!</div>
@@ -446,21 +433,19 @@ function Resume() {
                   <div className="Tech">JS</div>
                   <div className="Tech">React</div>
                   <div className="Tech">Friendly user</div>
-
                 </div>
               </div>
             </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
 
         <div className="ProjectEmptySpace"></div>
 
-        <Link className="Link" to="/weather" >
-          <div className="ProjectContainerB">
+        <div ref={myRefFive} className={isVisibleFive ? "ProjectContainerB-on" : "ProjectContainerB"}>
+          <Link className="LinkPortfolio" to="weather" >
             <div className="ProjectTitle">Weather App</div>
             <img className="ProjectIco" src={require("./AsetyResume/IcoWeb.png")} alt='IcoWeb' />
             <div className="ClickMan">Click and check it out!</div>
-
             <div className="RightType">
               <img src={require("./AsetyResume/GifWeather.gif")} alt="" />
               <div className="ProjectInfo">
@@ -477,35 +462,37 @@ function Resume() {
                 </div>
               </div>
             </div>
-          </div>
-        </Link>
-
-        <div className="ProjectEmptySpace"></div>
-
-        <div className="ProjectContainerP" onClick={Visual}>
-          <div className="ProjectTitle">Psychophysical Experiments</div>
-          <img className="ProjectIco" src={require("./AsetyResume/IcoGithub.png")} alt='IcoGit' />
-          <div className="LeftType">
-            <img src={require("./AsetyResume/GifVisual.gif")} alt="" />
-            <div className="ProjectInfo">
-              <div className="ProjectDescription">
-                A program that allows you to conduct various psychophysical experiments related to visual perception.
-              </div>
-              <div className="ProjectTech">
-                <div className="Tech">HTML</div>
-                <div className="Tech">CSS</div>
-                <div className="Tech">JS</div>
-                <div className="Tech">Vanilla</div>
-                <div className="Tech">Data export</div>
-              </div>
-            </div>
-          </div>
+          </Link>
         </div>
 
         <div className="ProjectEmptySpace"></div>
 
-        <Link className="Link" to="https://github.com/FastRabbitON" target="_blank">
-          <div className="ProjectContainerB">
+        <div ref={myRefSix} className={isVisibleSix ? "ProjectContainerP-on" : "ProjectContainerP"}>
+          <Link className="LinkPortfolio" to="https://github.com/FastRabbitON/VisualResolutionTest" >
+            <div className="ProjectTitle">Psychophysical Experiments</div>
+            <img className="ProjectIco" src={require("./AsetyResume/IcoGithub.png")} alt='IcoGit' />
+            <div className="LeftType">
+              <img src={require("./AsetyResume/GifVisual.gif")} alt="" />
+              <div className="ProjectInfo">
+                <div className="ProjectDescription">
+                  A program that allows you to conduct various psychophysical experiments related to visual perception.
+                </div>
+                <div className="ProjectTech">
+                  <div className="Tech">HTML</div>
+                  <div className="Tech">CSS</div>
+                  <div className="Tech">JS</div>
+                  <div className="Tech">Vanilla</div>
+                  <div className="Tech">Data export</div>
+                </div>
+              </div>
+            </div>
+          </Link>
+        </div>
+
+        <div className="ProjectEmptySpace"></div>
+
+        <Link className="LinkPortfolio" to="https://github.com/FastRabbitON">
+          <div ref={myRefSeven} className={isVisibleSeven ? "ProjectContainerB-on" : "ProjectContainerB"}>
             <div className="ProjectTitle">Repository on Github</div>
             <img className="ProjectIco" src={require("./AsetyResume/IcoGithub.png")} alt='IcoGit' />
             <div className="ProjectInfo">
@@ -521,31 +508,31 @@ function Resume() {
 
 
 
-      <div className="SectionThreeContainer">
-
-        <div className="SectionThreeContent">
-
-          <div id="Contact" className="ContactFirstSquare"
-            style={{ width: "300px", height: "150px" }}>
-
+      <div ref={AnchorContact} className="SectionContactContainer">
+        <div className="SectionContactContent">
+          <div className="ContactFirstSquare">
             <div className="ContactSecondSquare">
-
-              <div className="ContactThirdSquare">
-
-                <div className="ContactContainer">
-
-                  <p onClick={() => github()}> <img src={require("./AsetyResume/IcoGithub.png")} alt='IcoGit' /> github.com/FastRabbitON</p>
-                  <p onClick={() => mail()}> <img src={require("./AsetyResume/IcoGmail.png")} alt='IcoMail' /> fastrabbiton@gmail.com</p>
-                </div>
-
+              <div className="ContactContainer">
+                <p onClick={() => github()}> <img src={require("./AsetyResume/IcoGithub.png")} alt='IcoGit' /> github.com/FastRabbitON</p>
+                <p onClick={() => mail()}> <img src={require("./AsetyResume/IcoGmail.png")} alt='IcoMail' /> fastrabbiton@gmail.com</p>
               </div>
-
             </div>
-
           </div>
         </div>
+      </div>
 
-        <div className="IcoInfoContainer">  <Link target="_blank" to="https://icons8.com">Icons from Icons8</Link> </div>
+      <div className='ResumeFooter'>
+
+        <div className="FooterLeft">
+          <p><a target="_blank" href="https://www.freepik.com/free-vector/parallax-background-hot-air-balloons-flying-sky_21050286.htm#query=parallax%20baloon&position=1&from_view=search&track=ais">Image by upklyak on Freepik</a> </p>
+          <p> <a target="_blank" href="https://www.freepik.com/free-vector/flat-halloween-animated-ghost-collection_5415564.htm#query=ghost&position=0&from_view=keyword&track=sph">Image by Freepik </a></p>
+          <p><a target="_blank" href="https://icons8.com"> Icons by Icons8</a></p>
+        </div>
+
+        <div className="FooterRight">
+          <p> <Link className="LinkContact" to="https://github.com/FastRabbitON"> github.com/FastRabbitON <img src={require("./AsetyResume/IcoGithub.png")} alt='IcoGit' /> </Link> </p>
+          <p onClick={() => mail()}>  fastrabbiton@gmail.com <img src={require("./AsetyResume/IcoGmail.png")} alt='IcoMail' /></p>
+        </div>
 
       </div>
 

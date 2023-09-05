@@ -1,17 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono&display=swap');
-
-
-:root {
-  --main-dark-color: #1f1e25;
-  --nav-bar-color: rgba(19, 16, 21, 0.5);
-}
-
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-size: 1rem;
 }
 
 html {
@@ -19,157 +10,178 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
+  background-color: #58a0d4;
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
-  /* Firefox */
 }
 
-.Link {
-  text-decoration: none;
-  width: 100%;
-}
-
-html::-webkit-scrollbar {
-  display: none;
-}
-
-
-:root {
-  --GradientColor: linear-gradient(-60deg, #33ccff, #ff33cc);
-}
-
-#AboutMe {
-  position: absolute;
-  z-index: 2;
-  top: 650px;
-  width: 10px;
-  height: 10px;
-  /* background-color: orangered; */
-}
-
-#Projects {
-  position: absolute;
-  z-index: 2;
-  top: 1350px;
-  width: 10px;
-  height: 10px;
-  /* background-color: rgb(51, 0, 255); */
-}
-
-/* #Contact {
-  position: absolute;
-  z-index: 2;
-  top: 42000px;
-  width: 10px;
-  height: 10px;
-} */
-
-
-
-.NavBarContainer {
-  top: 0;
+.ArrowToTop {
   position: fixed;
-  height: 60px;
-  width: 100vw;
-  background-color: black;
+  z-index: 15;
+  bottom: 10px;
+  left: 20px;
+  width: 35px;
+  height: 35px;
+  color: white;
+  background-color: rgba(30, 30, 30);
+  border-radius: 50%;
+  border: 0.1rem solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.4;
+  transition: all 0.1s ease-in-out;
+}
+
+.ArrowToTop:hover {
+  opacity: 1;
+  transition: all 0.1s ease-in-out;
+
+}
+
+
+/* NAVBAR */
+
+.ResumeNav {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+  z-index: 9;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0
+}
+
+.BtnContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-right: 20px;
+}
+
+.BtnContainer button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-weight: bold;
+  transition: color 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.BtnContainer button:hover {
+  color: black;
+  transition: color 0.15s ease-in-out;
+}
+
+
+
+/* PARALLAX */
+
+.ParallaxContainer {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ParallaxImage {
+  position: absolute;
+  transition: transform 0.3s ease-out;
+  width: 105%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.ParallaxText {
+  position: absolute;
+  z-index: 3;
+  color: transparent;
+  white-space: nowrap;
+  text-transform: uppercase;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 2;
-  transition: background-color 0.2s linear;
+  letter-spacing: 2px;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: black;
 }
 
-.LoadingBarContainer {
-  width: 80%;
-  height: 35%;
-  z-index: 3;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.ParallaxText p {
+  font-size: 75px;
 }
 
-
-.LoadingBar {
-  height: 10px;
-  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
-  border-radius: 5px;
-  transition: 0.1s width linear;
+#Mountains {
+  left: -40px;
+  bottom: -15px;
 }
 
-
-
-.Buttons {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 75%;
-  height: 65%;
+#Balloons {
+  right: -30px;
+  bottom: 0px;
 }
 
+/* ABOUT MEEE */
 
-.Buttons button {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  background: none;
-  outline: none;
-  border-color: transparent;
-  cursor: pointer;
-  font-weight: 600;
-  position: relative;
-  color: #ffffff;
-}
-
-.Buttons button::after {
-  content: '';
+.SkeletonOneImage,
+.SkeletonTwoImage {
   position: absolute;
-  width: 100%;
-  height: 3px;
-  border-radius: 1%;
-  background-image: linear-gradient(-60deg, #ffffff, #ffffff);
-  border-radius: 10px;
-  bottom: -0.5rem;
-  left: 0;
-  transform: scaleX(0%);
-  transition: transform 0.1s ease-in-out;
+  width: 300px;
+  height: auto;
+  object-fit: cover;
 }
 
-.Buttons button:hover::after {
-  transform: scaleX(100%);
-  transition: transform 0.1s ease-in-out;
+.SkeletonOneImage {
+  left: 0px;
+  bottom: 0px;
+  z-index: 1
+}
+
+.SkeletonTwoImage {
+  right: 10px;
+  top: 250px;
+  z-index: 1
+}
+
+.AboutMeContainer::before {
+  display: flex;
+  content: "";
+  width: 100%;
+  height: 30px;
+  background-image: linear-gradient(180deg, transparent, #58a0d4);
+  z-index: 8;
+  position: relative;
+  top: -30px;
 }
 
 .AboutMeContainer {
+  position: relative;
   width: 100vw;
   height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-
-.ResumeBilbordContainer {
-  position: absolute;
-  z-index: -1;
-  width: 100vw;
-  height: 6300px;
-  top: 0px;
-  left: 0;
-  background-image: url("./AsetyResume/Background.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  filter: brightness(20%) grayscale(80%);
-}
-
-
-.AboutMeEmpty {
-  width: 100vw;
-  height: 700px;
+  background: linear-gradient(180deg, rgba(88, 160, 212, 1) 0%, rgba(0, 0, 0, 1) 30%);
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .AboutMeContent {
@@ -180,38 +192,8 @@ html::-webkit-scrollbar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-
-
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0 85%;
-  }
-
-  50% {
-    background-position: 100% 20%;
-  }
-
-  100% {
-    background-position: 0 85%;
-  }
-
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0 85%;
-  }
-
-  50% {
-    background-position: 100% 20%;
-  }
-
-  100% {
-    background-position: 0 85%;
-  }
-
+  margin-top: 10rem;
+  z-index: 3;
 }
 
 .AboutMeSectionOne {
@@ -222,43 +204,6 @@ html::-webkit-scrollbar {
   justify-content: center;
   margin-bottom: 5rem;
 }
-
-.MainText {
-  width: 60%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Spline Sans Mono', monospace;
-  font-size: 8rem;
-  position: relative;
-  cursor: pointer;
-  background-image: linear-gradient(-60deg, #ffffff, #ffffff);
-  background-size: 100%;
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-
-.MainText:hover {
-  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
-}
-
-.MainText::after {
-  content: "|";
-  animation: blink-animation 1s steps(5, start) infinite;
-  cursor: pointer;
-}
-
-
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-
 
 .PhotoContainer {
   height: 100%;
@@ -282,10 +227,6 @@ html::-webkit-scrollbar {
   color: white;
 }
 
-
-
-/* SECTION */
-
 .AboutMeSectionTwo {
   width: 100%;
   height: 30rem;
@@ -304,64 +245,49 @@ html::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* background-color: #ff33cc;
-  border: 0.1rem solid black; */
 }
 
-
 .SkillsFirstSquare {
+  position: relative;
+  top: 0;
   width: 300px;
   height: 250px;
-  background-color: transparent;
-  border: 0.3rem solid black;
+  background-image: linear-gradient(-60deg, #223034, #4b2f44);
   border-radius: 10px;
-  position: relative;
-  transition: all 0.1s linear;
-  top: 0;
+  transition: all 0.2s ease-in-out;
 }
 
 .SkillsFirstSquare:hover {
-  transition: all 0.2s linear;
+  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
+  transition: all 0.2s ease-in-out;
   top: -10px;
 }
 
-.SkillsFirstSquare:hover .FullDot,
-.SkillsFirstSquare:hover .HalfDotL {
+.SkillsFirstSquare:hover .FullDot {
   background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
-  transition: background-image 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .SkillsSecondSquare {
-  position: relative;
-  top: 8px;
-  left: 10px;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(-60deg, #223034, #4b2f44);
-  border-radius: 10px;
-  transition: background-image 0.2s ease-in-out;
-}
-
-.SkillsFirstSquare:hover .SkillsSecondSquare {
-  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
-  transition: background-image 0.2s ease-in-out;
-}
-
-
-.SkillsThirdSquare {
   position: relative;
   top: 10px;
   left: 10px;
   width: 100%;
   height: 100%;
-  background-color: var(--main-dark-color);
+  background: rgba(0, 0, 0, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 1rem;
   border: 0.3rem solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease-in-out;
+
 }
 
 
@@ -388,33 +314,6 @@ html::-webkit-scrollbar {
   margin-left: 0.25rem;
 }
 
-.HalfDotL {
-  width: 0.75rem;
-  /*Size of Half Dots*/
-  height: 1.5rem;
-  /*Size of Half Dots*/
-  background-image: linear-gradient(-60deg, #223034, #4b2f44);
-  border-top-left-radius: 1.3rem;
-  border-bottom-left-radius: 1.3rem;
-  border-left: solid 0.1rem white;
-  border-top: solid 0.1rem white;
-  border-bottom: solid 0.1rem white;
-  margin-left: 0.25rem;
-}
-
-.HalfDotR {
-  width: 0.75rem;
-  /*Size of Half Dots*/
-  height: 1.5rem;
-  /*Size of Half Dots*/
-  background-color: transparent;
-  border-top-right-radius: 1.3rem;
-  border-bottom-right-radius: 1.3rem;
-  border-right: solid 0.1rem white;
-  border-top: solid 0.1rem white;
-  border-bottom: solid 0.1rem white;
-}
-
 .SkillsRateContainer {
   width: 75%;
   height: 95%;
@@ -422,7 +321,6 @@ html::-webkit-scrollbar {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-
 }
 
 .LabelSkill {
@@ -443,47 +341,34 @@ html::-webkit-scrollbar {
   margin-left: 0.5rem;
 }
 
-
-
 .LanguagesFirstSquare {
+  position: relative;
+  top: 0;
   width: 300px;
   height: 185px;
-  background-color: transparent;
-  border: 0.3rem solid black;
+  background-image: linear-gradient(-60deg, #223034, #4b2f44);
   border-radius: 10px;
-  position: relative;
-  transition: all 0.1s linear;
-  top: 0;
+  transition: all 0.2s ease-in-out;
 }
 
 .LanguagesFirstSquare:hover {
-  transition: all 0.2s linear;
   top: -10px;
+  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
+  transition: all 0.2s ease-in-out;
 }
 
 .LanguagesSecondSquare {
-  position: relative;
-  top: 8px;
-  left: 10px;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(-60deg, #223034, #4b2f44);
-  border-radius: 10px;
-  transition: background-image 0.2s ease-in-out;
-}
-
-.LanguagesFirstSquare:hover .LanguagesSecondSquare {
-  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
-  transition: background-image 0.2s ease-in-out;
-}
-
-.LanguagesThirdSquare {
   position: relative;
   top: 10px;
   left: 10px;
   width: 100%;
   height: 100%;
-  background-color: var(--main-dark-color);
+  background: rgba(0, 0, 0, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 1rem;
   border: 0.3rem solid black;
@@ -491,6 +376,8 @@ html::-webkit-scrollbar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease-in-out;
+
 }
 
 .LanguagesContent {
@@ -551,76 +438,44 @@ html::-webkit-scrollbar {
   align-items: center;
 }
 
-
-.BarInnerPL,
-.BarInnerENG,
-.BarInnerPJM {
+.BarInner {
   background-image: linear-gradient(-60deg, #223034, #4b2f44);
   border-radius: 5px;
   height: 99%;
 }
 
-.LanguagesFirstSquare:hover .BarInnerPL,
-.LanguagesFirstSquare:hover .BarInnerENG,
-.LanguagesFirstSquare:hover .BarInnerPJM {
+.LanguagesFirstSquare:hover .BarInner {
   background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
-
 }
-
-.BarInnerPL {
-  width: 100%;
-}
-
-.BarInnerENG {
-  width: 75%;
-}
-
-.BarInnerPJM {
-  width: 30%;
-}
-
-
-
 
 .EducationFirstSquare {
+  position: relative;
+  top: 0;
   width: 300px;
   height: 200px;
-  background-color: transparent;
-  border: 0.3rem solid black;
+  background-image: linear-gradient(-60deg, #223034, #4b2f44);
   border-radius: 10px;
-  position: relative;
-  transition: all 0.1s linear;
-  top: 0;
+  transition: all 0.2s ease-in-out;
 }
 
 .EducationFirstSquare:hover {
-  transition: all 0.2s linear;
+  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
+  transition: all 0.2s ease-in-out;
   top: -10px;
 }
 
 .EducationSecondSquare {
   position: relative;
-  top: 8px;
-  left: 10px;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(-60deg, #223034, #4b2f44);
-  border-radius: 10px;
-  transition: background-image 0.2s ease-in-out;
-}
-
-.EducationFirstSquare:hover .EducationSecondSquare {
-  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
-  transition: background-image 0.2s ease-in-out;
-}
-
-.EducationThirdSquare {
-  position: relative;
   top: 10px;
   left: 10px;
   width: 100%;
   height: 100%;
-  background-color: var(--main-dark-color);
+  background: rgba(0, 0, 0, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 1rem;
   border: 0.3rem solid black;
@@ -628,8 +483,9 @@ html::-webkit-scrollbar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+  transition: all 0.2s ease-in-out;
 
+}
 
 .EducationContent {
   color: white;
@@ -651,18 +507,36 @@ html::-webkit-scrollbar {
   cursor: default;
 }
 
+.GhostImage {
+  position: fixed;
+  width: 300px;
+  height: auto;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.GhostImage-on {
+  position: fixed;
+  width: 300px;
+  height: auto;
+  opacity: 0.8;
+  transition: all 0.5s ease-in-out;
+}
 
 
+/* PORTFOLIOOOO */
 
 .ProjectsSection {
+  position: relative;
   width: 100vw;
   height: fit-content;
-  background: #1f1e25;
+  background-image: linear-gradient(180deg, black, rgb(26, 0, 33), black, rgb(26, 0, 33));
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5rem 2rem 2rem 2rem;
+  padding: 15rem 2rem 15rem 2rem;
+
 }
 
 .ProjectEmptySpace {
@@ -671,34 +545,95 @@ html::-webkit-scrollbar {
 }
 
 
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(-50%) scaleX(1.1);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateX(10px) scaleX(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0px) scaleX(1);
+    opacity: 1;
+  }
+}
+
+
+.LinkPortfolio {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.LinkContact {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .ProjectContainerB,
 .ProjectContainerP {
   position: relative;
-  width: 100%;
+  width: 80%;
   height: fit-content;
-  background-color: rgba(19, 16, 21, 255);
   border-radius: 10px;
+  background: rgba(30, 30, 30, 9);
+  padding: 2rem;
   border: 0.2rem solid black;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 2rem;
-  transition: border 0.1s ease-in-out;
   cursor: pointer;
+  z-index: 2;
 
+  opacity: 0;
+  transform: translateX(-50%);
 }
 
-.ProjectContainerB:hover {
+
+.ProjectContainerB-on,
+.ProjectContainerP-on {
+  position: relative;
+  width: 80%;
+  height: fit-content;
+  border-radius: 10px;
+  background: rgba(30, 30, 30, 9);
+  padding: 2rem;
+  border: 0.2rem solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  z-index: 2;
+
+  animation: slideAnimation 0.8s ease-in-out;
+}
+
+
+.ProjectContainerB-on:hover {
   border: 0.2rem solid #33ccff;
-  transition: border 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
-.ProjectContainerP:hover {
+.ProjectContainerP-on:hover {
   border: 0.2rem solid #ff33cc;
-  transition: border 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
-
 
 .ProjectIco {
   position: absolute;
@@ -711,24 +646,22 @@ html::-webkit-scrollbar {
   height: auto;
 }
 
-.ProjectContainerB:hover .ClickMan {
+.ProjectContainerB-on:hover .ClickMan {
   transition: color 0.25s ease-in-out;
   color: #33ccff
 }
 
-.ProjectContainerP:hover .ClickMan {
+.ProjectContainerP-on:hover .ClickMan {
   color: #ff33cc;
   transition: color 0.25s ease-in-out;
 
 }
 
-
-
 .ClickMan {
   position: absolute;
   top: 5px;
   right: 5px;
-  width: 50px;
+  width: 70px;
   border-radius: 5px;
   text-align: center;
   font-size: 12px;
@@ -737,10 +670,7 @@ html::-webkit-scrollbar {
   text-transform: uppercase;
 }
 
-
-
 .ProjectTitle {
-
   font-size: 3rem;
   color: white;
   margin: 2rem 0 2rem 0;
@@ -759,7 +689,6 @@ html::-webkit-scrollbar {
   justify-content: space-around;
   align-items: center;
 }
-
 
 .LeftType img,
 .RightType img {
@@ -792,7 +721,6 @@ html::-webkit-scrollbar {
   transition: border 0.1s ease-in-out;
   margin-bottom: 1rem;
   text-align: center;
-
 }
 
 .ProjectTech {
@@ -815,61 +743,55 @@ html::-webkit-scrollbar {
 }
 
 
+/* COONTACT */
 
-
-.SectionThreeContainer {
-  width: 100vw;
-  height: 800px;
+.SectionContactContainer {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(180deg, rgb(26, 0, 33), #1e1e1e);
+}
+
+.SectionContactContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ContactFirstSquare {
+  position: relative;
+  top: 0;
   width: 300px;
   height: 150px;
-  background-color: transparent;
-  border: 0.3rem solid black;
+  background-image: linear-gradient(-60deg, #223034, #4b2f44);
   border-radius: 10px;
-  position: relative;
-  transition: all 0.1s linear;
-  top: 0;
+  transition: all 0.2s ease-in-out;
+  z-index: 2;
 }
 
 .ContactFirstSquare:hover {
-  transition: all 0.2s linear;
+  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
+  transition: all 0.2s ease-in-out;
   top: -10px;
 }
 
-.ContactFirstSquare:hover .ContactContainer p {
-  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
-  transition: background-image 0.2s ease-in-out;
-}
-
 .ContactSecondSquare {
-  position: relative;
-  top: 8px;
-  left: 10px;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(-60deg, #223034, #4b2f44);
-  border-radius: 10px;
-  transition: background-image 0.2s ease-in-out;
-}
-
-.ContactFirstSquare:hover .ContactSecondSquare {
-  background-image: linear-gradient(-60deg, #33ccff, #ff33cc);
-  transition: background-image 0.2s ease-in-out;
-}
-
-.ContactThirdSquare {
   position: relative;
   top: 10px;
   left: 10px;
   width: 100%;
   height: 100%;
-  background-color: var(--main-dark-color);
+  background: rgba(0, 0, 0, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 1rem;
   border: 0.3rem solid black;
@@ -878,17 +800,10 @@ html::-webkit-scrollbar {
   align-items: center;
 }
 
-.SectionThreeContent {
-  width: 55%;
-  height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
 
 .ContactContainer {
   position: relative;
-  width: 95%;
+  width: 100%;
   height: 80%;
   display: flex;
   flex-direction: column;
@@ -917,51 +832,94 @@ html::-webkit-scrollbar {
   cursor: pointer;
 }
 
-.IcoInfoContainer {
-  position: absolute;
-  left: -30px;
-  padding: 5px;
-  height: fit-content;
-  width: fit-content;
-  background-color: #1f1e25;
-  border: 2px solid black;
-  color: white;
-  cursor: pointer;
-  transform: rotate(-90deg);
-  font-size: 12px;
+
+/* STOPKA */
+
+.ResumeFooter {
+  width: 100vw;
+  height: 100px;
+  background-color: #1e1e1e;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.2rem solid black;
 }
 
-.IcoInfoContainer a {
-  color: white;
-  text-decoration: none;
-  font-size: 12px;
+.FooterLeft,
+.FooterRight {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
+
+.FooterLeft {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.FooterLeft p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  color: white
+}
+
+.FooterLeft a {
+  text-decoration: none;
+  color: white;
+}
+
+.FooterRight {
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.FooterRight p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  color: white
+}
+
+.FooterRight img {
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+
+
 
 /* RESIZE */
-
-@media only screen and (max-width: 1160px) {
-
-  .MainText {
-    font-size: 6rem;
-  }
-}
 
 
 @media only screen and (max-width: 1050px) {
 
-  #Projects {
-    top: 1950px;
+  .ResumeNav {
+    height: fit-content;
   }
 
-  /* #Contact {
-    top: 5600px;
-  } */
-
-  .ResumeBilbordContainer {
-    height: 6900px;
+  .SkeletonOneImage {
+    left: 150px;
+    bottom: -10px
   }
 
-  .MainText,
+  .SkeletonTwoImage {
+    top: 580px;
+  }
+
+  .SkeletonOneImage,
+  .SkeletonTwoImage {
+    width: 280px;
+  }
+
   .PhotoContainer {
     margin-bottom: 3rem;
     height: 50%;
@@ -969,13 +927,14 @@ html::-webkit-scrollbar {
   }
 
   .PhotoCV {
-    width: 21rem;
-    height: 21rem;
+    width: 23rem;
+    height: 23rem;
   }
 
   .AboutMeSectionOne {
     flex-direction: column;
-    height: 400px;
+    height: 300px;
+    margin-bottom: 1rem;
   }
 
   .AboutMeSectionTwo {
@@ -1015,9 +974,51 @@ html::-webkit-scrollbar {
     height: fit-content;
   }
 
+  .BtnContainer button {
+    font-size: 28px;
+  }
+
+  .SkeletonOneImage {
+    left: 0px;
+    bottom: 50px;
+  }
+
+
+  .SkeletonOneImage,
+  .SkeletonTwoImage {
+    width: 220px;
+  }
+
+  .ParallaxText p {
+    font-size: 70px;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  #Mountains {
+    left: -20px;
+  }
+
+  #Balloons {
+    right: -60px;
+    top: -15px;
+    width: 150%;
+  }
+
 }
 
 @media only screen and (max-width: 640px) {
+
+
+  .BtnContainer {
+    width: 90%;
+  }
+
+  .BtnContainer button {
+    font-size: 22px;
+  }
 
   .LabelSkill,
   .LanguagesTitle,
@@ -1027,32 +1028,61 @@ html::-webkit-scrollbar {
   .EducationContent b {
     font-size: 1rem;
   }
+
+
+  .LeftType img,
+  .RightType img {
+    width: 90%;
+    height: auto;
+  }
+
+  .SkeletonTwoImage {
+    right: -0px;
+
+  }
+
+  /* .ParallaxText p {
+    font-size: 55px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+  } */
+
+  #Balloons {
+    right: -120px;
+
+  }
 }
 
 
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 550px) {
 
-  .MainText {
-    font-size: 4rem;
+  .SkeletonOneImage,
+  .SkeletonTwoImage {
+    display: none;
   }
 
-  .LeftType img,
-  .RightType img {
-    display: block;
-    width: 75vw;
-    height: fit-content;
+  .ParallaxText p {
+    font-size: 55px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
   }
 
+  #Balloons {
+    right: -140px;
+
+  }
 }
 
 
 @media only screen and (max-width: 480px) {
 
-  .MainText {
-    font-size: 3rem;
+  .BtnContainer button {
+    font-size: 15px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    /* color: black; */
   }
-
 
   .PhotoCV {
     width: 16rem;
@@ -1064,7 +1094,7 @@ html::-webkit-scrollbar {
   }
 
   .ProjectTitle {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .ProjectDescription,
@@ -1078,22 +1108,14 @@ html::-webkit-scrollbar {
     width: 70%;
   }
 
-
   .FullDot,
   .EmptyDot {
     width: 1rem;
     height: 1rem;
   }
 
-  .HalfDotR,
-  .HalfDotL {
-    height: 1rem;
-    width: 0.5rem;
-  }
 
-
-
-  .SectionThreeContent {
+  .SectionContactContent {
     width: 70%;
   }
 
@@ -1118,5 +1140,24 @@ html::-webkit-scrollbar {
 }
 
 
+@media only screen and (max-width: 440px) {
+  .ParallaxText p {
+    font-size: 45px;
+  }
 
-@media only screen and (max-width: 320px) {}
+  .FooterLeft,
+  .FooterRight {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .ParallaxText p {
+    font-size: 38px;
+  }
+
+  #Balloons {
+    right: -140px;
+
+  }
+}

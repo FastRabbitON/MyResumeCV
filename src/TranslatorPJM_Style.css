@@ -124,7 +124,7 @@ html {
     border-color: var(--hoover-color);
 }
 
-nav {
+.navTranslator {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -425,7 +425,7 @@ main {
         font-size: 2rem;
     }
 
-    nav {
+    .navTranslator {
         display: flex;
         justify-content: space-between;
     }
