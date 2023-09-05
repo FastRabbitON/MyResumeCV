@@ -1,5 +1,5 @@
 # MyResume CV
-https://srv49151.seohost.com.pl/
+https://fastrabbiton.pl/
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@ MyResume CV.
 ## How to run
 
 Online:
-https://srv49151.seohost.com.pl/
+https://fastrabbiton.pl/
 
 Or:
  1. Download the entire repository
