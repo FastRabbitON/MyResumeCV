@@ -3,13 +3,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import Resume from './ResumeWeb';
+import Resume from './Resume';
 
-import Translator from './TranslatorPJM'
-import Weather from './WeatherApp'
-import Legal from './LegalFLY'
+import Translator from './Projects/TranslatorPJM/TranslatorPJM'
+import Weather from './Projects/WeatherApp/WeatherApp'
+import Legal from './Projects/LegalFly/LegalFLY'
 
-import Test from "./TestFHUJ"
 
 export default function App() {
 
@@ -20,8 +19,6 @@ export default function App() {
       <Routes>
 
         <Route path="/" element={<Resume />} />
-
-        <Route path="/sprawdzam" element={<Test />} />
 
         <Route path="/translator" element={<Translator />} />
         <Route path="/weather" element={<Weather />} />
